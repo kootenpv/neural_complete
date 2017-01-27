@@ -92,3 +92,7 @@ class TextEncoderDecoder(EncoderDecoder):
         self.build_qa_coders()
         print("number of QA pairs:", len(self.questions))
         return self.get_xy()
+
+
+class QuestionAnswerEncoderDecoder(EncoderDecoder):
+    pass
