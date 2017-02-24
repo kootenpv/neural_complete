@@ -42,8 +42,11 @@ def get_data():
 
 def train(ted, model_name):
     lb = LSTMBase(model_name, ted)
-    lb.train(test_cases=TRAINING_TEST_CASES)
-    lb.save()
+    try:
+        lb.train(test_cases=TRAINING_TEST_CASES)
+    except KeyboardInterrupt:
+        print("saving")
+        lb.save()
 
 
 def train_char(model_name):

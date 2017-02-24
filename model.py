@@ -8,12 +8,14 @@ from keras.optimizers import RMSprop
 
 class LSTMBase(object):
 
-    def __init__(self, model_name, encoder_decoder=None, hidden_units=128):
+    def __init__(self, model_name, encoder_decoder=None, hidden_units=128, base_path="models/"):
         self.model_name = model_name
+        self.h5_path = base_path + model_name + ".h5"
+        self.pkl_path = base_path + model_name + ".pkl"
         self.model = None
         self.hidden_units = hidden_units
         if encoder_decoder is None:
-            self.encoder_decoder = just.read(model_name + ".pkl")
+            self.encoder_decoder = just.read(self.pkl_path)
         else:
             self.encoder_decoder = encoder_decoder
 
@@ -27,7 +29,7 @@ class LSTMBase(object):
         return np.argmax(probas)
 
     def build_model(self):
-        if os.path.isfile(self.model_name + ".h5"):
+        if os.path.isfile(self.h5_path):
             model = self.load()
         else:
             # build the model: a single LSTM
@@ -43,7 +45,7 @@ class LSTMBase(object):
             model.compile(loss='categorical_crossentropy', optimizer=optimizer)
         return model
 
-    def train(self, test_cases=None, iterations=10, batch_size=256, num_epochs=1, **kwargs):
+    def train(self, test_cases=None, iterations=10, batch_size=256, num_epochs=3, **kwargs):
         if self.model is None:
             self.model = self.build_model()
         if not hasattr(self.encoder_decoder, "X"):
@@ -61,7 +63,6 @@ class LSTMBase(object):
     def predict(self, text, diversity, max_prediction_steps, break_at_token=None):
         if self.model is None:
             self.model = self.build_model()
-        # actually, need to still make this "recursive"
         outputs = []
         for _ in range(max_prediction_steps):
             X = self.encoder_decoder.encode_question(text)
@@ -79,11 +80,11 @@ class LSTMBase(object):
             del self.encoder_decoder.X
         if hasattr(self.encoder_decoder, "y"):
             del self.encoder_decoder.y
-        just.write(self.encoder_decoder, self.model_name + ".pkl")
-        self.model.save(self.model_name + ".h5")
+        just.write(self.encoder_decoder, self.pkl_path)
+        self.model.save(self.h5_path)
 
     def load(self):
-        return load_model(self.model_name + ".h5")
+        return load_model(self.h5_path)
 
     def _show_test_cases(self, test_cases):
         if test_cases is None:

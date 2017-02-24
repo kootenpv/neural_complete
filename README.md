@@ -14,13 +14,13 @@ This repository contains the backend for neural_complete. It uses flask to expos
 
 The [frontend repository](https://github.com/kootenpv/ng2_neural_complete) is a very thin layer communicating with the backend to receive autocomplete suggestions, written in [Angular 2](https://angular.io/).
 
-Hopefully the modular structure will be inspiring. It is setup so that it could soon also be used for training QA.
+Hopefully the modular structure will be useful.
 
 ## Do It Yourself
 
 ### Scraping data
 
-Unfortunately the Github API does not allow to search by filename, so I wrote a scraping script to gather python data specifically trained on keras source code. You can change the search query to gather your own data. Do not overdo it as to "annoy" github; in my case I only ran it for a few minutes, roughly 200 scripts. You would need a lot more for a better result.
+Unfortunately the Github API does not allow to search by filename, so I wrote a scraping script to gather python data specifically trained on keras source code. You can change the search query to gather your own data. Do not overdo it as to "annoy" github; in my case I only ran it for a few minutes, roughly collecting 200 scripts. You would need a lot more for a reasonable result!
 
 ### Training the model
 
@@ -29,3 +29,5 @@ Unfortunately the Github API does not allow to search by filename, so I wrote a 
 ### Credits
 
 It uses a lot of the ideas of the standard keras [LSTM text generation example](https://github.com/fchollet/keras/blob/master/examples/lstm_text_generation.py).
+
+Whenever using any of this code: attribute.
