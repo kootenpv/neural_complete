@@ -18,7 +18,7 @@ class EncoderDecoder():
         self.X, self.y = self.build_data()
 
     def build_data(self):
-        return NotImplementedError
+        raise NotImplementedError
 
     def encode_x(self, x):
         return self.ex.get(x, 0)
