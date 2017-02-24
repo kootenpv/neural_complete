@@ -1,0 +1,12 @@
+md-input-container {
+    width: 70%
+}
+
+code {
+    color: grey;
+}
+
+.hljs {
+    background-color: white;
+    color: rgb(84, 88, 140);
+}

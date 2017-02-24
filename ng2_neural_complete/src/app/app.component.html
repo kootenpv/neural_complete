@@ -1,0 +1,33 @@
+<div class="centered">
+    <md-card>
+        <h1>
+            {{title}}
+        </h1>
+
+
+            <md-select placeholder="Choose a model" [(ngModel)]="activeModel" name="activatedModel">
+                <md-option *ngFor="let model of lstmModels" [value]="model">
+                    {{model}}
+                </md-option>
+            </md-select>
+
+
+
+        <md-input-container>
+            <input ng2-auto-complete mdInput
+                   [(ngModel)]="myData"
+                   [source]="mySource"
+                   path-to-data="data.results"
+                   size="100"
+            />
+        </md-input-container>
+
+        <button md-raised-button type="submit" (click)="append()">Add </button>
+
+        <div style="min-height:150px; margin-top:50px" highlight-js-content=".highlight">
+            <code class="highlight python"># generated code follows below</code>
+            <code class="highlight python" *ngFor="let item of codeArray">{{item}}<br/></code>
+        </div>
+
+    </md-card>
+</div>

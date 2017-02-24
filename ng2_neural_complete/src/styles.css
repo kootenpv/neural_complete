@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+
+html {
+    color: rgb(84, 88, 140);
+    background-color:aliceblue;
+}
+
+md-card {
+    background-color: white;
+}
+
+.centered {
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    /* bring your own prefixes */
+    transform: translate(-50%, 0%);
+}

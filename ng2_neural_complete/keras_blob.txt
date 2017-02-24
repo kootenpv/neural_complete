@@ -1,0 +1,5470 @@
+def thirty_seconds():
+
+        """
+
+        30 seconds to Keras
+        """
+
+        model = keras.models.Sequential()
+        model.add(keras.layers.Dense(output_dim = 64, input_dim = 100))
+        model.add(keras.layers.Activation("relu"))
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation
+
+
+model = Sequential()
+model.add(Dense(2,1,init='uniform',activation='linear'))
+model.complie(loss='mse',optimizer='rmsprop')
+from keras.models import Sequential
+from keras.layers.core import Dense
+
+
+def build_model():
+    model = Sequential()
+    model.add(Dense(1, activation='linear', input_dim=1))
+    return model
+from keras.models import Sequential
+from keras.layers.core import Dense
+
+
+
+
+def build_model():
+    model = Sequential()
+
+
+    model.add(Dense(1, activation='relu', input_dim=1))
+
+
+    return model
+
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation
+from keras.layers.recurrent import LSTM
+
+
+model = Sequential()
+model.add(LSTM(128, dropout_W=0.2, dropout_U=0.2))  # try using a GRU instead, for fun
+Kerasには2つのレイヤー構成方法がある。
+
+それらは、SequentialとGraphと呼ばれる。
+
+順番にモジュールを見ていこう。
+
+'''
+
+from keras.models import Sequential
+model = Sequential()
+
+
+'''
+
+Sequentialのモデルには、レイヤーを簡単に追加できる
+
+'''
+
+from keras.layers.core import Dense, Activation
+model.add(Dense(output_dim=64, input_dim=100, init="glorot_uniform"))
+    keras_model=Sequential()#单支线性网络模型
+    #卷积层输出的特征图为20个，卷积核大小为5*5
+
+    keras_model.add(Convolution2D(20, 5, 5,input_shape=(3, 60, 60)))#网络输入每张图片大小为3通道，60*60的图片。
+    #激活函数层
+
+    keras_model.add(Activation('relu'))
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import LSTM
+    def create_network(self):
+
+        embedding_vector_length = 32
+
+        model = Sequential()
+        model.add(Embedding(sentence, embedding_vector_length, inp))
+        model.add(LSTM(100))
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+
+
+model = Sequential()
+model.add(Dense(32, input_dim=784))
+model.add(Activation('relu'))
+model.add(Dense(10))
+model.add(Activation('softmax'))
+from keras.layers.recurrent import LSTM
+
+from keras.models import Sequential
+
+
+
+
+def create():
+
+    model = Sequential()
+
+
+    model.add(LSTM(10, input_dim=6))
+    model.add(Dropout(0.25))
+    model.add(Dense(1))
+
+
+    model.compile(loss='msle', optimizer='rmsprop')
+
+
+    return model
+from keras.layers.recurrent import LSTM
+
+from keras.models import Sequential
+
+
+
+
+def create():
+
+    model = Sequential()
+
+
+    model.add(LSTM(30, input_dim=6))
+    model.add(Dropout(0.25))
+    model.add(Dense(1))
+
+
+    model.compile(loss='msle', optimizer='rmsprop')
+
+
+    return model
+    pytest.importorskip('keras')
+
+    import keras.models
+    import nengo_extras.keras
+
+
+    model = keras.models.Sequential()
+    model.add(nengo_extras.keras.SoftLIF(input_shape=(1,)))
+
+
+    x = np.linspace(-10, 30, 256).reshape(-1, 1)
+
+from keras.models import Sequential
+from keras.layers.core import Dense
+
+
+
+
+def build_model():
+    model = Sequential()
+
+
+    model.add(Dense(16, activation='relu', input_dim=3))
+    model.add(Dense(16, activation='relu'))
+
+
+    return model
+from numpy import *
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+from keras.optimizers import SGD
+
+from keras.datasets import mnist
+
+
+model = Sequential()
+model.add(Dense(784, 500, init='glorot_uniform'))  # 输入层，28*28=784
+"""Vanilla neural network model."""
+from ...model import KerasModel
+from ..window_model import FrameModel
+        from keras.models import Sequential
+
+        model = Sequential()
+        model.add(
+            Reshape((input_shape[0]*input_shape[1],), input_shape=input_shape))
+
+import keras
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution2D
+
+
+def build_model(full_image_size):
+    model = Sequential()
+    model.add(Convolution2D(1,1,1, border_mode='same',  activation='sigmoid',input_shape = full_image_size))
+from keras.utils.dot_utils import Grapher
+
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation, Merge, Flatten
+word_sequence.add(GRU(5, 2))
+
+
+
+model = Sequential()
+model.add(Merge([word_sequence, ent_lookup, rel_lookup], mode='concat'))
+model.add(Activation('relu'))
+from keras.models import Sequential
+from keras.layers import Flatten, Dense
+from keras.optimizers import sgd
+
+
+
+
+def get_model():
+    model = Sequential()
+    model.add(Flatten(input_shape=(1, 3, 3)))
+    model.add(Dense(100, activation='relu'))
+from keras.models import Sequential
+
+
+model = Sequential()
+
+
+
+
+from keras.layers import Dense, Activation
+
+
+model.add(Dense(output_dim=64, input_dim=100))
+model.add(Activation("relu"))
+model.add(Dense(output_dim=10))
+from keras.utils.dot_utils import Grapher
+
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation, Merge, Flatten
+word_sequence.add(GRU(5, 2))
+
+
+
+model = Sequential()
+model.add(Merge([word_sequence, ent_lookup, rel_lookup], mode='concat'))
+model.add(Activation('relu'))
+from keras.utils.dot_utils import Grapher
+
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation, Merge, Flatten
+word_sequence.add(GRU(5, 2))
+
+
+
+model = Sequential()
+model.add(Merge([word_sequence, ent_lookup, rel_lookup], mode='concat'))
+model.add(Activation('relu'))
+import keras
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution2D
+
+
+def build_model():
+    model = Sequential()
+    model.add(Convolution2D(10,5,5, border_mode='same', activation='relu',input_shape = full_image_size))
+from keras.utils.dot_utils import Grapher
+
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation, Merge, Flatten
+word_sequence.add(GRU(5, 2))
+
+
+
+model = Sequential()
+model.add(Merge([word_sequence, ent_lookup, rel_lookup], mode='concat'))
+model.add(Activation('relu'))
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation
+from keras.optimizers import SGD
+
+
+model = Sequential()
+
+
+model.add(Dense(output_dim=64, input_dim=100, init="glorot_uniform"))
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+from keras.utils.visualize_util import plot
+
+
+model = Sequential()
+model.add(Dense(output_dim=64, input_dim=100))
+model.add(Activation('relu'))
+
+
+
+
+keras.optimizers.Adagrad()
+keras.objectives.categorical_crossentropy()
+metrics=['accuracy']
+
+
+
+
+
+model = Sequential()
+model.add(Dense(32, input_dim=100)
+model.add(Dense(10, activation='softmax'))
+import numpy as np
+
+
+
+from keras.models import Sequential
+from keras.layers import Dense, Activation, Dropout
+    :return: keras model
+
+    """
+
+    nnotes = np.diff(note_range)[0]
+
+
+
+    model = Sequential()
+    model.add(LSTM(128, input_shape=(train_len, nnotes)))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+    model = Sequential()
+    model.add(Convolution3D(32, 3, 3, 3, activation='relu', border_mode='same', input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+    model = Sequential()
+    model.add(Convolution3D(32, 3, 3, 3, activation='relu', input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+def build_model(input_shape=(1, 13, 13, 13)):
+
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+def build_model(input_shape=(1, 13, 13, 13)):
+
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.utils import visualize_util
+
+
+model = Sequential()
+
+
+model.add(Dense(32, input_shape=(10,)))
+model.add(PReLU())
+model.add(BatchNormalization())
+model.add(Dropout(0.5))
+
+
+model.add(Dense(32))
+import keras
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+import numpy as np
+
+X = np.array([20, 10, 4, 0]).reshape((1, 4))
+
+y = np.array([1.]) # 正解ラベル
+
+
+
+model = Sequential()
+model.add(Dense(1, input_shape=(4,)))
+model.add(Activation("sigmoid"))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+def build_model(input_shape=(1, 13, 13, 13)):
+
+    model = Sequential()
+        model.add(GaussianNoise(0.5, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+
+
+model = Sequential([
+merged = Merge([left_branch, right_branch], mode='concat')
+
+
+
+final_model = Sequential()
+final_model.add(merged)
+final_model.add(Dense(10, activation='softmax'))
+from keras.layers import Dense
+
+from keras.models import Sequential
+
+
+model = Sequential()
+model.add(Dense(32, input_shape=(500,)))
+model.add(Dense(10, activation='softmax'))
+model.compile(optimizer='rmsprop',
+from keras.models import Sequential
+from keras.optimizers import RMSprop
+
+
+
+
+def get_st_model():
+    print('Build model...')
+
+    model = Sequential()
+    model.add(LSTM(512, batch_input_shape=(1, 1, 29), return_sequences=True, stateful=True))
+    def prepare_model(self):
+        from keras.layers import Dense
+        from keras.models import Sequential
+        self.layers = [128, 64]
+
+        model = Sequential()
+        model.add(Dense(self.layers[0], input_shape=(self.num_features,)))
+                    .reshape(10,10,51,51))
+
+        self.keras_model = keras.models.Sequential()
+        conv_layer = keras.layers.convolutional.Convolution2D(
+                        nb_filter=2, nb_row=4, nb_col=4, subsample=(2,2),
+
+                        activation="relu", input_shape=(10,51,51))
+
+        self.keras_model.add(conv_layer)
+from keras.utils.dot_utils import Grapher
+
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation, Merge, Flatten
+word_sequence.add(GRU(5, 2))
+
+
+
+model = Sequential()
+model.add(Merge([word_sequence, ent_lookup, rel_lookup], mode='concat'))
+model.add(Activation('relu'))
+from keras.models import Sequential
+from keras.layers import Convolution2D, MaxPooling2D
+from keras.layers import Activation, Dropout, Flatten, Dense
+def build_model(n_class):
+    model_name = 'ensemble_basic'
+
+
+    model = Sequential()
+    model.add(Dense(n_class, input_dim=392))
+from keras.models import Sequential
+from keras.layers import Convolution2D, MaxPooling2D
+from keras.layers import Activation, Dropout, Flatten, Dense
+def build_model(n_class):
+    model_name = 'ensemble_onehidden'
+
+
+    model = Sequential()
+    model.add(Dense(n_class, input_dim=392))
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation
+from keras.layers.recurrent import LSTM
+def build_lstm(n_timesteps=8, n_features=8, n_labels=3, units=256):
+
+  model = Sequential()
+
+
+  W1 = l2(0.01)
+
+
+
+  model.add(LSTM(units, return_sequences=False, input_shape=(n_timesteps, n_features), W_regularizer=W1))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+def build_model(input_shape=(1, 8, 8, 8)):
+
+    model = Sequential()
+        model.add(GaussianNoise(0.5, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+def build_model(input_shape=(1, 6, 6, 6)):
+
+    model = Sequential()
+        model.add(GaussianNoise(0.5, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+def build_model(input_shape=(1, 10, 10, 10)):
+
+    model = Sequential()
+        model.add(GaussianNoise(0.5, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+def build_model(input_shape=(1, 5, 5, 5)):
+
+    model = Sequential()
+        model.add(GaussianNoise(0.5, input_shape=input_shape))
+from keras.models import Sequential
+from cnn.keras.models.partitions2 import d3G
+from keras.layers import Merge
+    merged = Merge([model1, model2, model3], mode='concat')
+
+
+
+    model = Sequential()
+    model.add(merged)
+
+
+    model.add(Dense(512, activation='relu'))
+                        .reshape(10,10,51,51).transpose(0,2,3,1))
+
+            self.keras_model = keras.models.Sequential()
+            conv_layer = keras.layers.convolutional.Convolution2D(
+                            activation="relu", input_shape=(51,51,10),
+
+                            dim_ordering='tf')
+
+            self.keras_model.add(conv_layer)
+            self.keras_model.add(keras.layers.convolutional.MaxPooling2D(
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+
+
+model = Sequential([
+merged = Merge([left_branch, right_branch], mode='concat')
+
+
+
+final_model = Sequential()
+final_model.add(merged)
+final_model.add(Dense(10, activation='softmax'))
+                        .reshape(10,10,51,51).transpose(0,2,3,1))
+
+            self.keras_model = keras.models.Sequential()
+            conv_layer = keras.layers.convolutional.Convolution2D(
+                            activation="relu", input_shape=(51,51,10),
+
+                            dim_ordering='tf')
+
+            self.keras_model.add(conv_layer)
+            self.keras_model.add(keras.layers.convolutional.MaxPooling2D(
+from keras.layers.convolutional import Convolution2D
+
+from keras.models import Sequential
+from keras.optimizers import Adam
+
+
+
+
+def get_model_zoom(feature_size=128, image_size=128, filter_size=8, channels=3):
+    model = Sequential()
+    model.add(Convolution2D(feature_size, filter_size, filter_size, input_shape=(channels, image_size, image_size),
+                    .reshape(10,10,51).transpose(0,2,1))
+
+        self.keras_model = keras.models.Sequential()
+        conv_layer = keras.layers.convolutional.Convolution1D(
+                        #https://github.com/fchollet/keras/blob/0.2.0/keras/layers/convolutional.py#L88
+
+                        activation="relu", input_shape=(51,10))
+
+        self.keras_model.add(conv_layer)
+from keras.models import Sequential
+from cnn.keras.models.partitions3 import sub_cnn
+from keras.layers import Merge
+from keras.layers.core import Dense, Dropout
+
+
+
+
+def build_model(num_classes, input_shape=(1, 29, 29, 29)):
+from keras.models import Sequential
+from cnn.keras.models.partitions1 import d3G
+from keras.layers import Merge
+    model2 = d3G.build_model(input_shape)
+
+
+
+    merged = Merge([model1, model2], mode='concat')
+
+
+
+    model = Sequential()
+    model.add(merged)
+from keras.models import Sequential, Graph
+from keras.layers.core import Dense, Dropout, Activation, Lambda, Merge, Masking
+def train(x_train, y_train, x_test, y_test):
+
+    model = Graph()
+    model.add_input(name = 'input', input_shape = (maxlen,), dtype = 'int')
+np.random.seed(1337)  # for reproducibility
+
+
+
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation, Flatten, Reshape
+
+nb_epoch = 1
+
+
+
+X_data = np.array([[1,2,3,4],[5,6,7,8],[9,10,11,12]]).reshape((1,3,4))
+
+print(X_data)
+
+model = Sequential()
+from keras.models import Sequential
+from keras.layers import Merge
+from keras.layers.core import Dense, Dropout
+    merged = Merge([model1, model2, model3], mode='concat')
+
+
+
+    model = Sequential()
+    model.add(merged)
+
+
+    model.add(Dense(512, activation='relu'))
+import numpy as np
+
+from keras.models import Sequential
+from keras.layers.core import Dense
+from keras.layers.noise import GaussianNoise
+
+
+
+
+
+def build_model():
+    model = Sequential()
+    model.add(GaussianNoise(0.1, input_shape=(1,), name='age_noise1'))
+import numpy as np
+
+from keras.models import Sequential
+from keras.layers.core import Dense
+from keras.layers.noise import GaussianNoise
+
+
+
+
+
+def build_model():
+    model = Sequential()
+    model.add(GaussianNoise(0.1, input_shape=(1,), name='age_noise1'))
+"""
+
+Test Keras installation
+"""
+
+import tensorflow as tf
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation, Flatten
+
+
+
+# Create the Sequential model
+model = Sequential()
+from keras.models import Sequential
+from keras.layers import Dense, Activation, Dropout
+from keras.layers import LSTM
+    print('Build model...')
+    model = Sequential()
+    model.add(LSTM(512, return_sequences=True, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 13, 13, 13)):
+    model = Sequential()
+from keras import backend as K
+from keras.models import Sequential
+from keras.layers import Convolution2D, MaxPooling2D
+from keras.preprocessing.image import load_img
+
+from keras.utils import np_utils
+from keras.models import load_model
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+    model = Sequential()
+    model.add(Convolution3D(32, 3, 3, 3, activation='relu', border_mode='same', input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+    model = Sequential()
+    model.add(Convolution3D(32, 3, 3, 3, activation='relu', input_shape=input_shape))
+from keras.layers.core import Dropout
+
+from keras.layers.core import Flatten
+from keras.models import Sequential
+
+
+
+
+def build_deep_cnn(num_classes=3):
+
+    model = Sequential()
+
+
+    model.add(Convolution2D(112, 4, 4, border_mode='same', input_shape=(112, 112, 1)))
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation, Dropout
+from keras.layers.recurrent import LSTM
+
+
+
+def get_model(props):
+    return basic_model(props)
+
+
+def basic_model(props):
+
+import numpy as np
+
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation, Flatten
+    # linear or tanh activation works slightly
+
+    model = Sequential()
+    model.add(Dense(10, input_shape=input_sp))
+from keras.models import Sequential
+from keras.layers.recurrent import LSTM
+from keras.layers.core import Dense, Activation, Dropout
+
+
+
+
+def lstm_model(seq_len, total_char):
+
+
+    model = Sequential()
+import numpy as np
+
+import pytest
+
+
+
+from keras.models import Sequential
+from keras.engine.training import weighted_objective
+    X = np.array([[[1], [1]],
+
+                  [[0], [0]]])
+
+    model = Sequential()
+    model.add(Masking(mask_value=0, input_shape=(2, 1)))
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+from keras.optimizers import RMSprop
+
+
+
+def create_model():
+    #set architecture
+
+    model = Sequential()
+    model.add(Dense(164, init = 'lecun_uniform', input_shape=(14,)))
+# -*- coding:utf-8 -*-
+
+
+
+
+
+
+
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.wrappers.scikit_learn import KerasClassifier
+
+def create_model():
+
+    model = Sequential()
+    model.add(Dense(12, input_dim=8, init='uniform', activation='relu'))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 13, 13, 13)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+def build_model(input_shape=(1, 5, 5, 5)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+def build_model(input_shape=(1, 5, 5, 5)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+def build_model(input_shape=(1, 5, 5, 5)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+def build_model(input_shape=(1, 5, 5, 5)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+def build_model(input_shape=(1, 5, 5, 5)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from sklearn.linear_model import LogisticRegressionCV
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation
+from keras.utils import np_utils
+
+
+model = Sequential()
+model.add(Dense(10, input_shape=(2,)))
+model.add(Activation('tanh'))
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+    param = {'num_hidden_layers': 11, 'num_nodes': 30, 'num_epochs': 1000, 'activation': 'relu'}
+
+    model = Sequential()
+    for _ in range(param['num_hidden_layers']):
+
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+    param = {'num_hidden_layers': 2, 'num_nodes': 60, 'num_epochs': 1000, 'activation': 'relu'}
+
+    model = Sequential()
+    for _ in range(param['num_hidden_layers']):
+
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+    param = {'num_hidden_layers': 2, 'num_nodes': 60, 'num_epochs': 1000, 'activation': 'relu'}
+
+    model = Sequential()
+    for _ in range(param['num_hidden_layers']):
+
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+    param = {'num_hidden_layers': 2, 'num_nodes': 100, 'activation': 'relu'}
+
+    model = Sequential()
+    for _ in range(param['num_hidden_layers']):
+
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+    param = {'num_hidden_layers': 2, 'num_nodes': 30, 'num_epochs': 1000, 'activation': 'relu'}
+
+    model = Sequential()
+    for _ in range(param['num_hidden_layers']):
+
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+    param = {'num_hidden_layers': 3, 'num_nodes': 100, 'activation': 'relu'}
+
+    model = Sequential()
+    for _ in range(param['num_hidden_layers']):
+
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+    param = {'num_hidden_layers': 3, 'num_nodes': 30, 'num_epochs': 1000, 'activation': 'relu'}
+
+    model = Sequential()
+    for _ in range(param['num_hidden_layers']):
+
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+    param = {'num_hidden_layers': 6, 'num_nodes': 100, 'num_epochs': 1000, 'activation': 'relu'}
+
+    model = Sequential()
+    for _ in range(param['num_hidden_layers']):
+
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+    param = {'num_hidden_layers': 6, 'num_nodes': 30, 'num_epochs': 1000, 'activation': 'relu'}
+
+    model = Sequential()
+    for _ in range(param['num_hidden_layers']):
+
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+    param = {'num_hidden_layers': 6, 'num_nodes': 1000, 'num_epochs': 1000, 'activation': 'relu'}
+
+    model = Sequential()
+    for _ in range(param['num_hidden_layers']):
+
+import numpy as np
+
+import pytest
+
+
+
+from keras.models import Sequential
+from keras.engine.training import weighted_objective
+    X = np.array([[[1], [1]],
+
+                  [[0], [0]]])
+
+    model = Sequential()
+    model.add(Masking(mask_value=0, input_shape=(2, 1)))
+import numpy as np
+
+
+
+from keras.models import Model
+from keras.models import Sequential
+
+
+from keras.layers import Dense
+from keras.callbacks import TensorBoard
+
+
+
+
+
+def model_binary():
+    model = Sequential()
+    model.add(Dense(1, input_dim=784))
+    model.add(Activation('sigmoid'))
+import numpy as np
+
+import pytest
+
+
+
+from keras.models import Sequential
+from keras.engine.training import weighted_objective
+    X = np.array([[[1], [1]],
+
+                  [[0], [0]]])
+
+    model = Sequential()
+    model.add(Masking(mask_value=0, input_shape=(2, 1)))
+import numpy as np
+
+import pytest
+
+
+
+from keras.models import Sequential
+from keras.engine.training import weighted_objective
+    X = np.array([[[1], [1]],
+
+                  [[0], [0]]])
+
+    model = Sequential()
+    model.add(Masking(mask_value=0, input_shape=(2, 1)))
+# https://github.com/fchollet/keras#getting-started-30-seconds-to-keras
+
+
+
+from keras.models import Sequential
+
+
+model = Sequential()
+
+
+# Stacking layers is as easy as .add():
+
+
+from keras.layers import Dense, Activation
+
+
+model.add(Dense(output_dim=64, input_dim=100))
+model.add(Activation("relu"))
+import numpy as np
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation
+from keras.utils.visualize_util import plot
+
+
+
+
+
+def run():
+
+    model = Sequential()
+    model.add(Dense(4, input_dim=2, init='uniform'))
+import numpy as np
+
+import pytest
+
+
+
+from keras.models import Sequential
+from keras.engine.training import weighted_objective
+    X = np.array([[[1], [1]],
+
+                  [[0], [0]]])
+
+    model = Sequential()
+    model.add(Masking(mask_value=0, input_shape=(2, 1)))
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+    param = {'num_hidden_layers': 6, 'num_nodes': 100, 'activation': 'relu'}
+
+    model = Sequential()
+    for _ in range(param['num_hidden_layers']):
+
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+    param = {'num_hidden_layers': 2, 'num_nodes': 100, 'num_epochs': 8000, 'activation': 'relu'}
+
+    model = Sequential()
+    for _ in range(param['num_hidden_layers']):
+
+from keras.models import Model, Sequential
+from keras.layers import Dense, Flatten
+from utils.model_factory import save_model_and_generate_id
+
+
+
+model = Sequential()
+model.add(Flatten(input_shape=(224, 224, 3)))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+    model = Sequential()
+    model.add(Convolution3D(32, 3, 3, 3, activation='relu', border_mode='same', input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+    model = Sequential()
+    model.add(Convolution3D(32, 3, 3, 3, activation='relu', border_mode='same', input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+    model = Sequential()
+    model.add(Convolution3D(32, 3, 3, 3, activation='relu', input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+    model = Sequential()
+    model.add(Convolution3D(32, 3, 3, 3, activation='relu', border_mode='same', input_shape=input_shape))
+import pandas
+
+import math
+
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import LSTM
+    def __init__(self, depth, max_sentence_length):
+
+        model = Sequential()
+        model.add(LSTM(4, input_dim=1))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 13, 13, 13)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 13, 13, 13)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 13, 13, 13)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+# -*- coding:utf-8 -*-
+
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+__author__ = "JOHNKYON"
+
+
+
+model = Sequential()
+
+
+model.add(Dense(output_dim=64, input_dim=100))
+model.add(Activation("relu"))
+from keras.models import Sequential
+from keras.layers import Merge
+from keras.layers.core import Dense, Dropout
+    merged = Merge([model1, model2], mode='concat')
+
+
+
+    model = Sequential()
+    model.add(merged)
+
+
+    model.add(Dense(512, activation='relu'))
+import keras
+from keras.models import Sequential
+from keras.layers import Dense
+import numpy
+
+seed=7
+
+dataset=numpy.loadtxt("../pima-indians-diabetes.data",delimiter=',')
+
+X=dataset[:,0:8]
+
+
+
+Y = dataset[:,8]
+
+model=Sequential()
+model.add((Dense(12,input_dim=8,init='uniform',activation='relu')))
+from keras.models import Sequential
+from keras.layers import LSTM, Dense, Reshape
+
+
+def get_model():
+    model = Sequential()
+
+
+    model.add(LSTM(7, input_shape = (7, 1), activation = 'sigmoid'))
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+from keras.optimizers import RMSprop
+
+
+
+def create_model():
+    #set architecture
+
+    model = Sequential()
+    model.add(Dense(164, init = 'lecun_uniform', input_shape=(64,)))
+from keras.optimizers import SGD
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+
+
+def main():
+
+    model = Sequential()
+
+
+    model.add(Dense(output_dim=64, input_dim=100))
+from keras.models import Sequential
+from keras.layers.core import Dense
+from keras.optimizers import SGD
+from keras.layers.advanced_activations import LeakyReLU
+
+import numpy as np
+
+
+
+model = Sequential()
+model.add(Dense(output_dim=4, input_dim=2, init='uniform'))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 6, 6, 6)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 10, 10, 10)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from __future__ import print_function
+
+#Keras
+from keras.models import Sequential
+from keras.layers.core import Dense,Activation,Dropout
+    if model_name=='rnn':
+
+        print("start create the rnn model")
+        model=Sequential()
+        model.add(GRU(input_dim=35,output_dim=256,return_sequences=True))
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+from keras.regularizers import l2
+def build_model(l2_coef=L2_COEF):
+
+
+
+    # Model is a sequential stack of layers
+    model = Sequential()
+
+
+    # Layer: output dense layer + softmax
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+from keras.optimizers import RMSprop
+
+def createModel():
+
+
+
+    model = Sequential()
+    model.add(Dense(164, init='lecun_uniform', input_shape=(64,)))
+    model.add(Activation('relu'))
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers.core import Dropout
+from keras.layers.normalization import BatchNormalization
+
+
+
+
+
+def build_model(input_dim=68):
+    model = Sequential()
+import numpy as np
+
+import pytest
+
+
+
+from keras.models import Sequential
+from keras.engine.training import weighted_objective
+    X = np.array([[[1], [1]],
+
+                  [[0], [0]]])
+
+    model = Sequential()
+    model.add(Masking(mask_value=0, input_shape=(2, 1)))
+import numpy as np
+
+import pytest
+
+
+
+from keras.models import Sequential
+from keras.engine.training import weighted_objective
+    X = np.array([[[1], [1]],
+
+                  [[0], [0]]])
+
+    model = Sequential()
+    model.add(Masking(mask_value=0, input_shape=(2, 1)))
+
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation
+from sklearn import datasets
+
+
+
+model = Sequential()
+
+
+model.add(Dense(input_dim = 4, output_dim = 8))
+model.add(Activation('relu'))
+
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation
+from sklearn import datasets
+
+
+
+model = Sequential()
+
+
+model.add(Dense(input_dim = 4, output_dim = 6))
+model.add(Activation('relu'))
+import numpy as np
+
+import pytest
+
+
+
+from keras.models import Sequential
+from keras.engine.training import weighted_objective
+    X = np.array([[[1], [1]],
+
+                  [[0], [0]]])
+
+    model = Sequential()
+    model.add(Masking(mask_value=0, input_shape=(2, 1)))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 6, 6, 6)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 6, 6, 6)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+def build_model(input_shape=(1, 5, 5, 5)):
+    model = Sequential()
+
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation
+from sklearn import datasets
+
+
+
+model = Sequential()
+
+
+model.add(Dense(input_dim = 4, output_dim = 6))
+model.add(Activation('relu'))
+    train_y = [234,  2.34, 2340]
+
+
+
+    keras_model = Sequential()
+
+
+    keras_model.add(Dense(32, input_dim=9))
+    # now the model will take as input arrays of shape (*, 9)
+    # and output arrays of shape (*, 32)
+
+
+
+    keras_model.add(Dense(32))
+from keras.datasets import mnist
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+model = Sequential()
+model.add(Dense(2, input_dim =2))
+model.add(Activation('sigmoid'))
+model.add(Dense(1))
+model.add(Activation('sigmoid'))
+from keras.models import Sequential
+from keras.layers.core import Activation, Dense
+
+
+def createMlp(numHiddenUnits, numMolecules):
+
+    # Make network
+
+    model = Sequential()
+
+
+    # Make hidden layer
+
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers.core import Dropout
+from keras.layers.normalization import BatchNormalization
+
+
+
+
+
+def build_model(input_dim=68):
+    model = Sequential()
+from keras.layers.advanced_activations import LeakyReLU
+
+import json
+
+from keras.models import Sequential, model_from_json
+    kernel_size1 = (3, 3)
+
+
+
+    model = Sequential()
+
+
+    model.add(BatchNormalization(input_shape=(37, 160, 3)))
+
+
+    model.add(Convolution2D(nb_filters1, 3, 3, subsample=(1, 1), border_mode="same"))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 6, 6, 6)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 6, 6, 6)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 10, 10, 10)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 10, 10, 10)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+from keras.regularizers import l2
+
+
+
+def build_model(input_shape=(1, 5, 5, 5)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+from keras.regularizers import l2
+
+
+
+def build_model(input_shape=(1, 5, 5, 5)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+from keras.regularizers import l2
+
+
+
+def build_model(input_shape=(1, 5, 5, 5)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+    model = Sequential()
+    model.add(Convolution3D(32, 3, 3, 3, activation='relu', input_shape=input_shape))
+__author__ = '0138695'
+
+from keras.models import Sequential
+from keras.layers import Dense,Activation
+
+
+model = Sequential()
+model.add(Dense(output_dim=64,input_dim=100))
+model.add(Activation('relu'))
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+from keras.optimizers import SGD
+
+y = np.array([[0],[1],[1],[0]])
+
+
+
+model = Sequential()
+model.add(Dense(8, input_dim=2))
+model.add(Activation('tanh'))
+from keras.models import Sequential
+from keras.layers import Masking, Activation, Input,LSTM,Dense
+from config import hypers
+
+def myLSTM():
+
+    model = Sequential()
+    model.add(Masking(mask_value=0., input_shape=(hypers["timesteps"],hypers["feature_size"])))
+from keras.models import Sequential
+model = Sequential()
+from keras.layers.core import Dense, Activation
+
+
+model.add(Dense(output_dim=64, input_dim=100, init="glorot_uniform"))
+model.add(Activation("relu"))
+
+
+import sys
+
+
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation
+
+
+model = Sequential()
+
+
+model.add(Dense(input_dim = 4, output_dim = 6))
+model.add(Activation('relu'))
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers.core import Dropout
+from keras.layers.normalization import BatchNormalization
+
+
+
+
+
+def build_model(input_dim=30):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+
+
+model = Sequential()
+model.add(Dense(output_dim=64, input_dim=100))
+model.add(Activation("relu"))
+model.add(Dense(output_dim=10))
+import numpy as np
+
+import pytest
+
+
+
+from keras.models import Sequential
+from keras.engine.training import weighted_objective
+    X = np.array([[[1], [1]],
+
+                  [[0], [0]]])
+
+    model = Sequential()
+    model.add(Masking(mask_value=0, input_shape=(2, 1)))
+import numpy as np
+
+import tensorflow as tf
+
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+from keras.optimizers import SGD
+
+
+model = Sequential()
+
+
+model.add(Dense(output_dim=64,input_dim=100))
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+from keras.optimizers import SGD
+
+
+
+model = Sequential()
+# Dense(64) is a fully-connected layer with 64 hidden units.
+
+import numpy as np
+
+import pytest
+
+
+
+from keras.models import Sequential
+from keras.engine.training import weighted_objective
+    X = np.array([[[1], [1]],
+
+                  [[0], [0]]])
+
+    model = Sequential()
+    model.add(Masking(mask_value=0, input_shape=(2, 1)))
+from keras.models import Sequential
+
+
+model = Sequential()
+
+
+from keras.layers import Dense, Activation
+
+
+model.add(Dense(output_dim=64, input_dim=100))
+model.add(Activation("relu"))
+model.add(Dense(output_dim=10))
+import sys
+
+sys.path.append('../keras')
+
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation, Merge
+    print('Test accuracy:', score[1])
+
+
+
+def classifier(input_dim):
+
+    model = Sequential()
+    model.add(Dense(input_dim, 2048))
+import numpy as np
+
+from keras.models import Sequential
+from keras.layers.core import Activation, Dense
+y = np.array([[0],[1],[1],[0]], "float32")
+
+
+
+model = Sequential()
+model.add(Dense(2, input_dim=2, activation='sigmoid'))
+from keras.layers.recurrent import LSTM, SimpleDeepRNN
+
+
+
+
+
+def simpleLSTM(input_dim) :
+
+    model = keras.models.Sequential()
+    model.add(Embedding(input_dim, 256))
+    model.add(Activation('sigmoid'))
+
+    return model
+
+
+def LSTM512(input_dim) :
+
+    model = keras.models.Sequential()
+X = np.random.random((100,1))
+
+y = np.random.random((100,1))
+
+
+
+model = Sequential()
+model.add(Dense(1,input_shape=([1])))
+model.compile('sgd','mse')
+model.fit(X,y)
+
+
+
+
+model2 = Sequential()
+model2.add(Dense(1,input_shape=([1])))
+from keras.models import Sequential
+from cnn.keras.models.deepROI2.model_NC_conv import build_model as modNC
+    merged = Merge([model1, model2], mode='concat')
+
+
+
+    model = Sequential()
+    model.add(merged)
+
+
+    model.add(Dense(512, activation='relu', W_regularizer=l2(0.0001)))
+from keras.models import Sequential
+from cnn.keras.models.deepROI3.model_NC_conv import build_model as modNC
+    merged = Merge([model1, model2, model3], mode='concat')
+
+
+
+    model = Sequential()
+    model.add(merged)
+
+
+    model.add(Dense(512, activation='relu', W_regularizer=l2(0.0001)))
+from keras.models import Sequential
+from cnn.keras.models.deepROI2.model_NC_conv import build_model as modNC
+    merged = Merge([model1, model2, model3], mode='concat')
+
+
+
+    model = Sequential()
+    model.add(merged)
+
+
+    model.add(Dense(512, activation='relu', W_regularizer=l2(0.0001)))
+import numpy as np
+
+from keras.models import Sequential
+from keras.layers.core import Activation, Dense
+y = np.zeros(4, dtype='uint8')
+
+
+
+X[0] = [0, 0]
+
+y[0] = 0
+
+X[1] = [0, 1]
+
+y[1] = 1
+
+X[2] = [1, 0]
+
+y[2] = 1
+
+X[3] = [1, 1]
+
+y[3] = 0
+
+
+
+model = Sequential()
+model.add(Dense(2, input_dim=2))
+model.add(Activation('sigmoid'))
+model.add(Dense(1))
+from keras.layers import Dense, Activation
+from keras.models import Sequential
+from keras.optimizers import SGD
+
+
+
+
+model = Sequential()
+model.add(Dense(output_dim=64, input_dim=100))
+model.add(Activation("relu"))
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation, Embedding
+from keras.layers import LSTM, SimpleRNN, GRU
+X_
+
+
+
+model = Sequential()
+model.add(Dense(input_dim=input_dim, output_dim=12, activation=relu))
+model.add(Dropout(0.3))
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers.core import Dropout
+from keras.layers.normalization import BatchNormalization
+
+
+
+
+
+def build_model(input_dim=25):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.core import TimeDistributedDense, Activation, Dropout, Dense
+def create_network(in_neurons, out_neurons):
+
+
+
+    print "Creating Network..."
+
+
+
+    model = Sequential()
+__author__ = 'shin'
+
+import numpy as np
+
+from keras.models import Sequential
+from keras.layers import Dense, Activation,Embedding,Dropout,LSTM
+
+
+maxlen=111
+
+model=Sequential()
+model.add(Embedding(input_dim=30,output_dim=50,input_length=maxlen))
+import numpy as np
+
+import pytest
+
+
+
+from keras.models import Sequential
+from keras.engine.training import weighted_objective
+    X = np.array([[[1], [1]],
+
+                  [[0], [0]]])
+
+    model = Sequential()
+    model.add(Masking(mask_value=0, input_shape=(2, 1)))
+import keras.models
+
+
+from keras.models import Sequential
+from keras.layers import Dense
+
+
+def save_model(model, name):
+
+    model.load_weights('{}_weights.h5'.format(name))
+
+    return model
+
+
+model = Sequential()
+
+
+model.add(Dense(10, input_shape=(5,)))
+
+
+model = load_model('my_model')
+    model = keras.models.Sequential()
+    model.add(keras.layers.recurrent.LSTM(512, return_sequences=True, input_shape=(SEQUENCE_LENGTH, 256)))
+    model.add(keras.layers.core.Dropout(0.2))
+    model.add(keras.layers.recurrent.LSTM(512, return_sequences=False))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+    model = Sequential()
+    model.add(Convolution3D(32, 3, 3, 3, activation='relu', border_mode='same', input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+    model = Sequential()
+    model.add(Convolution3D(32, 3, 3, 3, activation='relu', border_mode='same', input_shape=input_shape))
+model = Sequential()
+model.add(Embedding(input_dim=input_dim, output_dim=output_dim, mask_zero=True))
+model.add(GlobalZAveragePooling1D())
+model.add(Dense(5))
+
+
+model = KerasUtils.zero_out_embedding(model)
+model.compile(loss='mse', optimizer='rmsprop')
+from sklearn.cross_validation import KFold
+
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation
+from keras.layers.normalization import BatchNormalization
+
+from keras.layers.advanced_activations import PReLU
+
+from keras.wrappers.scikit_learn import KerasRegressor
+
+
+
+
+def create_net():
+
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation
+
+
+np.random.seed(0)
+
+model = Sequential()
+model.add(Dense(output_dim=1, input_dim=1, init="normal"))
+model.add(Activation("relu"))
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation
+from keras.layers import Embedding
+from keras.layers import LSTM
+
+
+model = Sequential()
+model.add(Embedding(max_features, 256, input_length=maxlen))
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation
+from keras.optimizers import SGD
+
+
+model = Sequential()
+model.add(Dense(1, input_dim=784, activation='softmax'))
+import numpy as np
+
+import pytest
+
+
+
+from keras.models import Sequential
+from keras.engine.training import weighted_objective
+    X = np.array([[[1], [1]],
+
+                  [[0], [0]]])
+
+    model = Sequential()
+    model.add(Masking(mask_value=0, input_shape=(2, 1)))
+from keras.models import Sequential
+from keras.layers.core import Lambda, Dense
+from keras.layers.embeddings import Embedding
+import keras.backend as K
+from smlib.keras_model_update import KerasUtils, GlobalZSumPooling1D
+# imports
+
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution2D
+    @staticmethod
+
+    def build(width, height, depth, classes, weightPath=None):
+
+        model = Sequential()
+from keras.preprocessing.image import ImageDataGenerator
+
+from keras.models import Sequential
+from keras.layers import Convolution2D, MaxPooling2D, ZeroPadding2D
+from keras.layers import Activation, Dropout, Flatten, Dense
+
+
+model = Sequential()
+model.add(Flatten(input_shape=train_data.shape[1:]))
+import numpy as np
+
+import keras
+print keras.__version__
+'''
+
+A sample model
+'''
+
+model = Sequential()
+model.add(Convolution2D(32, 3, 3, input_shape=(150, 150, 3)))
+model.add(Activation('relu'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers.core import Dropout
+from keras.layers.normalization import BatchNormalization
+
+
+
+
+
+def build_model(input_dim=68):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers import Dense
+
+
+model=Sequential()
+model.add(Dense(1,input_dim=784,activation='sigmoid'))
+model.compile(optimizer='rmsprop',
+              loss='binary_crossentropy',
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout
+from keras.regularizers import l2
+    model = Sequential()
+    model.add(GaussianNoise(0.001, input_shape=(35,)))
+    model.add(Dense(70, activation='relu', W_regularizer=l2(0.0001)))
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation
+import gym
+
+
+
+atari = gym.make('SpaceInvaders-v0')
+
+atari.reset()
+
+
+
+
+
+model = Sequential()
+model.add(Dense(200, input_shape=(124800,), activation="relu"))
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation
+import gym
+
+
+
+atari = gym.make('SpaceInvaders-v0')
+
+atari.reset()
+
+
+
+
+
+model = Sequential()
+model.add(Dense(200, input_shape=(124800,), activation="relu"))
+import numpy as np
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+from keras.layers.recurrent import LSTM
+
+
+
+model = Sequential()
+model.add(Embedding(4, 16, input_length=4))
+model.add(LSTM(output_dim=128, activation='sigmoid', inner_activation='hard_sigmoid'))
+# coding=utf-8
+
+# gru2.py: 2 layer GRU RNN binary classifier.
+
+
+
+from keras.models import Sequential
+def GRU2(vocab_size, embedding_size, max_feats, hidden_layer_size,
+
+        dropout_prob):
+
+    model = Sequential()
+    model.add(Embedding(input_dim=vocab_size, output_dim=embedding_size,
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.optimizers import SGD
+trY = 2 * trX + np.random.randn(*trX.shape) * 0.33 # create a y value which is approximately linear but with some random noise
+
+
+
+# Linear regression model
+model = Sequential()
+model.add(Dense(output_dim=1, input_dim=1, init='normal', activation='linear'))
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+from keras.optimizers import SGD, Adam, RMSprop
+
+        X_train, y_train = self.load_training_data()
+
+
+
+        model = Sequential()
+        model.add(Dense(512, input_shape=(n_features,)))
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+from keras.layers.embeddings import Embedding
+
+from keras.layers.recurrent import LSTM
+
+
+model = Sequential()
+# coding=utf-8
+
+# gru2.py: 2 layer GRU RNN binary classifier.
+
+
+
+from keras.models import Sequential
+def GRU2(vocab_size, embedding_size, max_feats, hidden_layer_size,
+
+        dropout_prob):
+
+    model = Sequential()
+    model.add(Embedding(input_dim=vocab_size, output_dim=embedding_size,
+from keras.preprocessing.image import ImageDataGenerator
+
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation, Flatten, ZeroPadding2D
+input_shape = [1,28,28]
+
+output_classes = 10
+
+
+
+model = Sequential()
+
+
+model.add(ZeroPadding2D((1,1), input_shape=input_shape))
+model.add(Convolution2D(64, 5, 5, b_regularizer=l2(0.0001), W_regularizer=l2(0.0001), border_mode='valid'))
+# -*- coding: utf-8 -*-
+
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution2D
+        model = Sequential()
+        # first set of CONV => RELU => POOL
+
+        model.add(Convolution2D(20, 5, 5, border_mode='same', input_shape=(depth, height, width)))
+from keras.utils import np_utils
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation, Masking, TimeDistributedDense
+def get_model():
+
+    model = Sequential()
+    # model.add(Embedding(54, 32, input_length=200))
+    model.add(GRU(128, return_sequences=True, input_shape=(200, 50)))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution2D
+from keras.layers.convolutional import MaxPooling2D
+        # Initialize model
+        model = Sequential()
+
+
+        # CONV => RELU => CONV
+
+        model.add(Convolution2D(64, 3, 3, border_mode="same", input_shape=(depth, height, width)))
+from keras.utils import np_utils
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation, Masking, TimeDistributedDense
+def get_model():
+
+    model = Sequential()
+    # model.add(Embedding(54, 32, input_length=200))
+    model.add(GRU(128, return_sequences=True, input_shape=(200, 50)))
+def vgg():
+
+    model = Sequential()
+
+
+    model.add(Convolution2D(32, 3, 3, border_mode='valid', input_shape=(3, 100, 100)))
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+
+    model.add(Dropout(0.25))
+
+
+    model.add(Flatten())
+    # Note: Keras does automatic shape inference.
+from keras.models import Sequential
+from cnn.keras.models.meanROI1_1.model_single1_conv import build_model as mod1
+    merged = Merge([model1, model2, model3, model4, model5, model_diff, model_age], mode='concat')
+
+
+    model = Sequential()
+    model.add(merged)
+#coding: utf-8
+
+from keras.models import Sequential, Model
+from keras.layers import Dense, Dropout, Activation, Input
+from keras import backend as K
+
+
+
+model = Sequential()
+model.add(Embedding(1000, 64, input_length=1))
+# the model will take as input an integer matrix of size (batch, input_length).
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation
+from keras.layers import Embedding
+model = Sequential()
+model.add(Embedding(max_features, 256, input_length=maxlen))
+model.add(LSTM(output_dim=100, activation='sigmoid', inner_activation='hard_sigmoid'))
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation
+from keras.layers import Embedding
+model = Sequential()
+model.add(Embedding(max_features, 256, input_length=maxlen))
+model.add(LSTM(output_dim=128, activation='sigmoid', inner_activation='hard_sigmoid'))
+import numpy as np
+
+import pickle
+
+import keras
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+    model = Sequential()
+    model.add(Dense(1025, input_dim=1025, activation='relu'))
+    model.add(Dense(1025, activation='sigmoid'))
+from keras.models import Sequential
+from keras.layers import Convolution2D, MaxPooling2D
+from keras.layers import Activation, Dropout, Flatten, Dense
+
+
+def create_model():
+
+
+    model = Sequential()
+from keras.utils import np_utils
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+print(X_train.shape)
+
+print(Y_train.shape)
+
+model = Sequential()
+model.add(LSTM(64, return_sequences=True, input_shape = (n,1)))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution2D
+from keras.layers.convolutional import MaxPooling2D
+        model = Sequential()
+
+
+        # first set of CONV => RELU => POOL
+
+        model.add(Convolution2D(20, 5, 5, border_mode="same",
+    def __init__(self, num_layers, d, epochs=10):
+
+        self.num_epochs = epochs
+
+        self.model = keras.models.Sequential()
+                self.model.add(keras.layers.core.Dense(output_dim=d, init='glorot_uniform', activation='tanh', input_dim=d))
+
+        self.model.add(keras.layers.core.Dense(1, init='glorot_uniform', activation='linear', input_dim=d))
+from keras.layers import Activation, Dense, Reshape
+
+from keras.layers.recurrent import LSTM
+from keras.models import Sequential
+from keras.utils import np_utils
+y_train = np_utils.to_categorical(y_train, K)  # int -> one-of-vector
+
+y_test = np_utils.to_categorical(y_test, K)
+
+
+
+model = Sequential()
+
+
+# coding: utf-8
+
+
+
+# In[ ]:
+
+
+
+from keras.models import Sequential
+from keras.layers import Dense, Activation, Dropout
+# In[ ]:
+
+
+
+def model5(weights_path=None, channels=3, width=224, height=224):
+
+
+
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation
+from keras.utils import np_utils
+from keras.layers import *
+        self.train_X, self.test_X, self.train_y, self.test_y = train_test_split(X, y, train_size=0.5, random_state=0)
+
+
+
+        model = Sequential()
+        model.add(Dense(100, input_dim=dims, init='normal', activation='relu'))
+from keras.models import Sequential
+from keras.layers import Dense, Activation, Dropout
+from keras.optimizers import Adamax
+input_dim = X_train.shape[1]
+
+
+
+model = Sequential()
+
+
+model.add(Dense(output_dim=64, input_dim=input_dim))
+import keras.layers
+
+
+
+model_a = keras.models.Sequential()
+model_a.add(keras.layers.Dropout(0.0, input_shape=(1, nrows,ncols)))
+model_a.add(keras.layers.MaxPooling2D(pool_size=(2,2)))
+
+model_a.add(keras.layers.Flatten())
+
+
+model_b = keras.models.Sequential()
+model_b.add(keras.layers.InputLayer((2,)))
+import keras.layers
+
+
+
+model_a = keras.models.Sequential()
+model_a.add(keras.layers.Dropout(0.0, input_shape=(1, nrows,ncols)))
+model_a.add(keras.layers.MaxPooling2D(pool_size=(2,2)))
+
+model_a.add(keras.layers.Flatten())
+
+
+model_b = keras.models.Sequential()
+model_b.add(keras.layers.InputLayer((2,)))
+from keras.models import Sequential
+from keras.layers import Convolution2D, Dense
+
+
+model = Sequential()
+model.add(Convolution2D(12, 5, 5, border_mode='same', input_shape=(3, 256, 256)))
+model.add(Convolution2D(32, 3, 3, border_mode='same'))
+from keras.layers import LSTM
+
+from keras.models import Sequential
+from keras.optimizers import RMSprop
+
+
+from text_model import *
+
+
+print('Build model...')
+model = Sequential()
+model.add(LSTM(512, batch_input_shape=(batch_size,maxlen, len(chars)), return_sequences=True, stateful=True))
+import keras.layers
+
+
+
+model_a = keras.models.Sequential()
+model_a.add(keras.layers.Dropout(0.0, input_shape=(1, nrows,ncols)))
+model_a.add(keras.layers.MaxPooling2D(pool_size=(2,2)))
+
+model_a.add(keras.layers.Flatten())
+
+
+model_b = keras.models.Sequential()
+model_b.add(keras.layers.InputLayer((2,)))
+import keras.layers
+
+
+
+model_a = keras.models.Sequential()
+model_a.add(keras.layers.Dropout(0.0, input_shape=(1, nrows,ncols)))
+model_a.add(keras.layers.MaxPooling2D(pool_size=(2,2)))
+
+model_a.add(keras.layers.Flatten())
+
+
+model_b = keras.models.Sequential()
+model_b.add(keras.layers.InputLayer((2,)))
+from keras.models import Sequential
+from keras.optimizers import Adam, Adadelta
+from keras.layers.core import Dense, Activation, Flatten, Dropout
+from keras.layers.noise import GaussianNoise
+
+
+
+def make_model():
+    model = Sequential()
+
+
+    L2_REGULARIZATION = 0.03
+
+# import packages
+
+import numpy
+
+from keras.datasets import imdb
+from keras.models import Sequential
+X_test = sequence.pad_sequences(X_test, maxlen=max_words)
+
+# model
+model = Sequential()
+model.add(Embedding(top_words, 32, input_length=max_words))
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation, Flatten
+model.add(Flatten())
+# Note: Keras does automatic shape inference.
+model.add(Dense(256))
+model.add(Activation('relu'))
+from matplotlib import pyplot
+
+import keras
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation, Flatten
+    def __init__(self):
+
+        model = Sequential()
+        model.add(Convolution2D(32, 3, 3,input_shape=(1,96,96)))
+import mnist
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation, Flatten
+model = Sequential()
+model.add(Convolution2D(8, 5, 5, input_shape=trX.shape[1:], activation='sigmoid'))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+def make_example_model():
+
+    """Example model from keras documentation"""
+    model = Sequential()
+    model.add(Dense(output_dim=64, input_dim=100))
+    model = Sequential()
+    model.add(Convolution2D(nb_filters, kernel_size[0], kernel_size[1],
+from keras.models import Sequential
+from cnn.keras.models.metaROI1.model_single_conv import build_model as mod1
+    #merged = Merge([model1, model_diff_1, model2, model_diff_2, model3, model_diff_3, model4, model_diff_4, model5, model_diff_5], mode='concat')
+
+
+    model = Sequential()
+    model.add(merged)
+import tensorflow as tf
+
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+print('tensorflow hello world complete')
+
+
+
+# keras hello world
+model = Sequential()
+model.add(Dense(output_dim=64, input_dim=100))
+        import numpy as np
+
+        from keras.models import Sequential
+        from keras.layers.core import Dense, Activation
+        from keras.optimizers import SGD
+
+
+        model = Sequential()
+        model.add(Dense(2, input_dim=4))
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+from keras.layers.embeddings import Embedding
+
+    def build(self):
+
+        self.vocab.build()
+
+        model = Sequential()
+        model.add(Embedding(self.vocab.size(), 128))
+from keras.preprocessing.image import ImageDataGenerator
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation, Flatten
+
+    model = Sequential()
+    model.add(Convolution2D(32, 3, 3, border_mode='same',
+from keras.models import Sequential
+from cnn.keras.models.partitions3 import sub_cnn
+from keras.layers import Merge
+    merged = Merge([model1, model2, model3], mode='concat')
+
+
+
+    model = Sequential()
+    model.add(merged)
+
+
+    model.add(Dense(512, activation='relu'))
+
+
+import sys
+
+from model_helper import save_model
+
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation, Flatten
+from keras.layers import Convolution2D, MaxPooling2D
+
+
+
+model_file = sys.argv[1]
+weights_file = sys.argv[2]
+
+
+
+model = Sequential()
+
+
+model.add(Convolution2D(8, 5, 5, input_shape = (1, 28, 28)))
+
+
+import sys
+
+
+
+from keras.models import Sequential, save_model
+from keras.layers.core import Dense, Activation, Flatten
+model_dest_file = sys.argv[1]
+
+
+
+model = Sequential()
+
+
+model.add(Convolution2D(8, 5, 5, input_shape = (1, 28, 28)))
+model.add(Activation('relu'))
+
+
+import sys
+
+
+
+from keras.models import Sequential, save_model
+from keras.layers.core import Dense, Activation, Flatten
+model_dest_file = sys.argv[1]
+
+
+
+model = Sequential()
+
+
+model.add(Convolution2D(8, 5, 5, input_shape = (1, 28, 28)))
+model.add(Activation('relu'))
+import numpy as np
+
+
+
+#from keras.models import Sequential
+#from seya.layers.base import Replicator
+
+#     ''' Replicator is deprecated, use keras.layers.core.RepeatVector instead'''
+
+#     model = Sequential()
+#     model.add(Replicator(10))
+#     model.compile(loss="mse", optimizer="sgd")
+# import the necessary packages
+
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution2D
+    def build(width, height, depth, classes, weightsPath=None):
+
+        # initialize the model
+        model = Sequential()
+
+
+        # first set of CONV => RELU => POOL
+
+    model = Sequential()
+    model.add(Convolution2D(32, 5, 5, border_mode='valid', input_shape=(1, 28, 28), activation='relu'))
+#Fit the models and add results to array
+scoreList = []
+
+for model in kerasNonConvModels:
+    model.fit(xTrainVectoral, yTrain, validation_data=(xTestVectoral, yTest), nb_epoch=10, batch_size=2000, verbose=1)
+import numpy as np
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation, Flatten
+from keras.layers.convolutional import Convolution2D, MaxPooling2D
+
+
+
+def create_model():
+    model = Sequential()
+# coding=utf-8
+
+# shallow.py: Shallow 2 layer network.
+
+
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout
+
+    model = Sequential()
+    model.add(Dropout(0.75, input_shape=(input_dim,)))
+    model.add(Dense(5, activation="relu"))
+from keras.models import Sequential
+from keras.utils import np_utils
+
+
+K = 10
+
+
+
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
+
+y_test = np_utils.to_categorical(y_test, K)
+
+
+
+model = Sequential()
+model.add(Flatten(input_shape=(28, 28)))
+model.add(Dense(K))
+model.add(Activation("softmax"))
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation, Flatten
+from keras.layers.convolutional import Convolution2D, MaxPooling2D, AveragePooling2D
+
+input_shape = (input_channel, input_row, input_col) = (2, 64, 64)
+
+
+
+model = Sequential()
+model.add(Convolution2D(64, 7, 7, border_mode='same', input_shape=input_shape)
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    l = 0.1
+
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    l = 0.0001
+
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    l = 0.0001
+
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    l = 0.0001
+
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    l = 0.0001
+
+    model = Sequential()
+from keras.datasets import imdb
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import LSTM
+X_test = sequence.pad_sequences(X_test, maxlen=max_review_length)
+
+# create the model
+embedding_vecor_length = 32
+
+model = Sequential()
+model.add(Embedding(top_words, embedding_vecor_length, input_length=max_review_length))
+from keras.models import Sequential
+import keras
+from keras.layers import Convolution2D, MaxPooling2D
+    model = Sequential()
+    model.add(Convolution2D(32, 3, 3, input_shape=(3, 150, 150)))
+    model.add(Activation('relu'))
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation, Flatten
+class CNN:
+
+    def __init__(self):
+
+        branch1 = Sequential()
+        branch1.add(Convolution2D(32, 2, 2, activation='relu', border_mode='valid', input_shape=(3,4,4), W_regularizer=l2(0.01), activity_regularizer=activity_l2(0.01)))
+from keras.models import Sequential
+from keras.layers import Dense, Activation, LSTM
+
+
+class kerasTutorial():
+
+
+    def __init__(self):
+
+        self.model = Sequential()
+        self.model.add(LSTM(32, input_shape=(25,64)))
+
+
+    def run(self, data, labels):
+
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+def build_model(num_classes, input_shape=(1, 13, 13, 13)):
+
+    model = Sequential()
+    model.add(Convolution3D(32, 3, 3, 3, activation='relu', input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+def build_model(num_classes, input_shape=(1, 13, 13, 13)):
+
+    model = Sequential()
+    model.add(Convolution3D(32, 3, 3, 3, activation='relu', input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+def build_model(num_classes, input_shape=(1, 13, 13, 13)):
+
+    model = Sequential()
+    model.add(Convolution3D(64, 3, 3, 3, activation='relu', input_shape=input_shape))
+"""
+
+Trains model and saves the model params
+"""
+
+
+
+from keras.models import Sequential
+from keras.layers import Dense, Activation, Dropout
+note_range = data['note_range']
+
+
+
+
+
+model = Sequential()
+model.add(LSTM(128, input_shape=(X.shape[1], X.shape[2])))
+model.add(Dropout(0.2))
+from keras.layers import Activation, Convolution2D, Dense, Flatten, Reshape
+
+from keras.models import Sequential
+from keras.utils import np_utils
+
+
+K = 10
+
+y_train = np_utils.to_categorical(y_train, K)  # int -> one-of-vector
+
+y_test = np_utils.to_categorical(y_test, K)
+
+
+
+model = Sequential()
+model.add(Reshape((28, 28, 1), input_shape=(28, 28)))  # tensorflow-order!!
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution2D
+from keras.layers import Dropout
+    def build(width, height, depth, classes, weightsPath=None):
+
+        # Initialize model
+        model = Sequential()
+
+
+        # CONV => RELU => CONV
+
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import LSTM
+from keras.layers.embeddings import Embedding
+#creating the model
+
+embedding_vector_length = 32
+
+model = Sequential()
+model.add(Embedding(top_words, embedding_vector_length, input_length=max_review_length))
+import keras
+from keras.models import Sequential, Model
+from keras.layers import Flatten, Dense, Dropout, Reshape, Permute, Activation, Input, Merge
+    model = Sequential()
+    #3D convolutional layer with 32x32 optical flow as input
+
+    model.add(Convolution3D(30, 20, 17, 17, subsample=(4,2,2), input_shape=(1, 120,32,32)))
+from keras.models import Sequential
+from keras.layers import Convolution2D, MaxPooling2D
+from keras.layers import Activation, Dropout, Flatten, Dense
+nb_test_samples = 10
+
+nb_classes = 8
+
+
+
+img_width, img_height = 28, 28
+
+
+
+model = Sequential()
+model.add(Convolution2D(32, 5, 5, input_shape=(img_width, img_height, 1)))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+
+
+
+
+def build_model(input_shape=(1, 29, 29, 29)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+
+
+
+
+def build_model(input_shape=(1, 29, 29, 29)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+def build_model(num_classes, input_shape=(1, 13, 13, 13)):
+
+    model = Sequential()
+    model.add(Convolution3D(32, 5, 5, 5, activation='relu', input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+def build_model(num_classes, input_shape=(1, 13, 13, 13)):
+
+    model = Sequential()
+    model.add(Convolution3D(32, 5, 5, 5, activation='relu', input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+def build_model(num_classes, input_shape=(1, 13, 13, 13)):
+
+    model = Sequential()
+    model.add(Convolution3D(32, 5, 5, 5, activation='relu', input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+def build_model(num_classes, input_shape=(1, 13, 13, 13)):
+
+    model = Sequential()
+    model.add(Convolution3D(32, 3, 3, 3, activation='relu', input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+def build_model(num_classes, input_shape=(1, 13, 13, 13)):
+
+    model = Sequential()
+    model.add(Convolution3D(32, 3, 3, 3, activation='relu', input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+    model = Sequential()
+    model.add(Convolution3D(32, 3, 3, 3, activation='relu', input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 6, 6, 6)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 13, 13, 13)):
+    model = Sequential()
+from keras.datasets import imdb
+from keras.models import Sequential
+from keras.preprocessing import sequence
+X_test = sequence.pad_sequences(X_test, maxlen=length)
+
+
+
+model = Sequential()
+model.add(Embedding(features, 128, input_length=length))
+from keras.models import Sequential
+from keras.layers import Convolution2D, MaxPooling2D
+from keras.layers import Activation, Dropout, Flatten, Dense
+nb_test_samples = 10
+
+nb_classes = 8
+
+
+
+img_width, img_height = 28, 28
+
+
+
+model = Sequential()
+model.add(Convolution2D(32, 5, 5, input_shape=(img_width, img_height, 1)))
+# -*- coding: utf-8 -*-
+
+
+
+
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+from keras.optimizers import RMSprop
+
+
+model = Sequential()
+model.add(Dense(164, init='lecun_uniform', input_shape=(64,)))
+import keras
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Convolution2D, Flatten
+from keras.utils import np_utils
+
+
+
+model = Sequential()
+# input: 320x160 images with 3 channels -> (320, 160, 3) tensors.
+
+# this applies 24 convolution filters of size 5x5 each.
+
+from keras.models import Sequential
+from keras.layers import Convolution2D, MaxPooling2D
+from keras.layers import Activation, Dropout, Flatten, Dense
+def build_model():
+    model_name = 'basic3'
+
+
+    model = Sequential()
+    model.add(Convolution2D(64, 5, 5, input_shape=(1,128,128), init='he_normal'))
+import os.path
+
+import pandas as pd
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+trainY = np_utils.to_categorical(train[:,0].astype('int32'), 10)
+
+trainX = train[:,1:].astype('float32')
+
+trainX /= 255
+
+
+
+model = Sequential()
+model.add(Dense(784, 128))
+np.random.seed(1337)  # for reproducibility
+
+
+
+from keras.models import Sequential, Model
+from keras.layers import Input, Dense, Dropout, Activation, Flatten, merge
+    model = Sequential()
+    model.add(Flatten(input_shape=(1, 32, 32)))
+    model.add(Dense(256, W_regularizer=l2(0.001), init='he_normal'))
+from keras.models import Sequential
+from keras.layers import Dense, Activation, Convolution3D,Convolution2D, Flatten
+c3d = Convolution3D(32, 3, 3, 10, border_mode='valid', input_shape=(3,10, 100, 100))
+
+
+
+model = Sequential()
+model.add(Convolution2D(32, 3, 3, border_mode='valid', input_shape=(3, 100, 100)))
+import numpy
+
+from keras.models import Sequential
+from keras.layers import LSTM
+from keras.layers import Dense
+Y_train = sequence.pad_sequences(Y_train, maxlen=max_words)
+
+
+
+model = Sequential()
+model.add(Embedding(top_words, 32, input_length=max_words))
+import os.path
+
+import pandas as pd
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+trainY = np_utils.to_categorical(train[:,0].astype('int32'), 10)
+
+trainX = train[:,1:].astype('float32')
+
+trainX /= 255
+
+
+
+model = Sequential()
+model.add(Dense(784, 128))
+from keras.layers.normalization import BatchNormalization
+
+
+from keras.models import Sequential
+from keras.models import model_from_json
+from keras.layers.core import Activation
+from keras.layers import Dense
+# -*- coding: utf-8 -*-
+
+'''VGG16 model for Keras.
+
+
+# Reference:
+
+
+
+- [Very Deep Convolutional Networks for Large-Scale Image Recognition](https://arxiv.org/abs/1409.1556)
+
+    #     else:
+
+    #         img_input = input_tensor
+
+    model = Sequential()
+    model.add(Convolution2D(32, 5, 5, input_shape=(input_tensor), border_mode='same'))
+from keras.preprocessing import sequence
+import numpy
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation, Masking
+
+max_features = max(numpy.max(X_train), numpy.max(X_test))
+
+maxlen = k
+
+batch_size = 32
+
+
+
+model = Sequential()
+model.add(Embedding(max_features, 128, input_length=maxlen))
+from keras.models import Sequential
+from keras.layers import Dense, Activation, LSTM
+
+
+class kerasTutorial():
+
+
+    def __init__(self):
+
+        self.model = Sequential()
+        self.model.add(LSTM(32, input_shape=(25,64)))
+
+
+    def run(self, data, labels):
+
+# module:   cppn.py
+
+# author:   Jin Yeom
+
+# since:    01/11/17
+
+
+
+from keras.models import Sequential
+num_hidden_neurons = 20
+
+num_outputs = 1
+
+
+
+model = Sequential()
+model.add(Dense(output_dim=16, input_dim=4))
+model.add(Activation('relu'))
+def create_crcn():
+
+    model = Sequential()
+    model.add(BRNN(
+        300, 300, return_sequences=True,init='he_normal',
+
+def create_rcn():
+
+    model = Sequential()
+    model.add(BRNN(
+        300, 300, return_sequences=True,init='he_normal',
+
+from keras.preprocessing import sequence
+
+from keras.utils import np_utils
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation, Embedding
+print("construindo o modelo")
+
+model = Sequential()
+model.add(Embedding(numero_de_features, 128, dropout=0.2))
+model.add(LSTM(128, dropout_W=0.2, dropout_U=0.2))
+from keras.preprocessing.image import ImageDataGenerator
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation, Flatten
+
+y_train = np_utils.to_categorical(y_train)
+
+print y_train
+
+input_dim = X_train.shape[1]
+
+
+
+model = Sequential()
+
+
+model.add(Dense(output_dim=512, input_dim=input_dim))
+data, labels, data_input_shape = keras_build.read_data(train_dir)
+
+
+
+
+
+
+model = keras.models.Sequential()
+kdim1, kdim2 = kernel_shape
+
+print num_filters, kdim1, kdim2, data_input_shape
+
+model.add(Convolution2D(num_filters, kdim1, kdim2, input_shape = data_input_shape, dim_ordering = 'tf'))
+from keras.preprocessing.image import ImageDataGenerator
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation, Flatten
+
+y_train = np_utils.to_categorical(y_train)
+
+print y_train
+
+input_dim = X_train.shape[1]
+
+
+
+model = Sequential()
+
+
+model.add(Dense(output_dim=512, input_dim=input_dim))
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+from keras.optimizers import SGD
+
+
+
+model = Sequential()
+model.add(Dense(20, 64, init='uniform'))
+model.add(Activation('tanh'))
+        batch_norm_layer = keras.layers.normalization.BatchNormalization(
+
+                           axis=self.axis, input_shape=(2,2,2))
+
+        self.keras_model.add(batch_norm_layer)
+        self.keras_model.add(dense_layer)
+        dense_layer.set_weights([np.ones((1,8)).T, np.zeros(1)])
+
+        self.keras_model.compile(loss="mse", optimizer="sgd")
+
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+
+
+
+
+def build_model(input_shape=(1, 29, 29, 29)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+
+
+
+
+def build_model(input_shape=(1, 29, 29, 29)):
+    model = Sequential()
+import numpy as np
+
+import pandas as pd
+
+
+
+from keras.models import Sequential
+from keras.layers import Convolution2D, MaxPooling2D
+from keras.layers import Activation, Dropout, Flatten, Dense
+
+
+model = Sequential()
+model.add(Convolution2D(32, 3, 3, input_shape=(3, 150, 150)))
+import numpy as np
+
+
+
+model = Sequential()
+model.add(LSTM(32, input_dim=64))
+model.add(Dense(1))
+model.add(Activation('linear'))
+
+
+model_new = Sequential()
+model_new.add(Dense(10, input_dim=10))
+model_new.add(Activation('relu'))
+        ONE_HOT_HAND_SIZE = 28
+
+
+
+        modelRNN = Sequential()
+        modelRNN.add(LSTM(32, input_dim=ONE_HOT_FULL_SIZE))
+
+
+        modelHand = Sequential()
+        modelHand.add(Dense(ONE_HOT_HAND_SIZE, input_dim=ONE_HOT_HAND_SIZE))
+
+
+import numpy
+
+import pandas
+
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, GaussianDropout, GaussianNoise
+# split into input (X) and output (Y) variables
+
+X = dataset[:,0:13]
+
+Y = dataset[:,13]
+
+
+
+# create model
+model = Sequential()
+model.add(Dense(30, input_dim=13, init='normal', activation='relu'))
+        ONE_HOT_HAND_SIZE = 28
+
+
+
+        modelRNN = Sequential()
+        modelRNN.add(LSTM(32, input_dim=ONE_HOT_FULL_SIZE))
+
+
+        modelHand = Sequential()
+        modelHand.add(Dense(ONE_HOT_HAND_SIZE, input_dim=ONE_HOT_HAND_SIZE))
+import numpy as np
+
+
+
+model = Sequential()
+model.add(LSTM(32, input_dim=64))
+model.add(Dense(1))
+model.add(Activation('linear'))
+
+
+model_new = Sequential()
+model_new.add(Dense(10, input_dim=10))
+model_new.add(Activation('relu'))
+from __future__ import print_function
+
+from keras.models import load_model
+import keras
+from keras.models import Sequential
+    '''Create Simple Deep CNN model for Miyawaki fMRI scans based on
+
+    https://github.com/fchollet/keras/blob/master/examples/cifar10_cnn.py'''
+    model = Sequential()
+#!/usr/bin/env python
+
+
+
+
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation, Dropout
+    model = Sequential()
+
+
+    # First layer.
+
+    with tf.device("/cpu:0"):
+
+        model.add(Dense(
+        params[0], init='lecun_uniform', input_shape=(num_sensors,)
+
+# -*- coding: utf-8 -*-
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+from keras.optimizers import SGD
+
+
+# 搭建多层感知机
+
+
+
+# 模型初始化
+
+model = Sequential()
+import numpy
+
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers import Dense
+def baseline_model():
+    # create model
+    model = Sequential()
+    model.add(Convolution2D(32, 5, 5, border_mode='valid', input_shape=(1, 28, 28), activation='relu'))
+    # Neural Network
+
+    def model():
+        # create model
+        model = Sequential()
+        model.add(keras.layers.Dense(288, input_dim=288, init='normal',
+                                     activation='relu'))
+
+        model.add(keras.layers.Dense(200, init='normal', activation='relu'))
+        model.add(keras.layers.Dense(50, init='normal', activation='relu'))
+from keras.models import Sequential
+from keras.layers import Convolution2D, MaxPooling2D
+from keras.layers import Activation, Dropout, Flatten, Dense
+def build_model():
+    model_name = 'basic2'
+
+
+    model = Sequential()
+    model.add(Convolution2D(64, 3, 3, input_shape=(1,128,128)))
+from keras.models import Sequential
+from keras.layers import Convolution2D, MaxPooling2D
+from keras.layers import Activation, Dropout, Flatten, Dense
+def build_model():
+    model_name = 'basicnum'
+
+
+    model = Sequential()
+    model.add(Convolution2D(64, 3, 3, input_shape=(1,128,128), init='he_normal'))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    l = 0.0001
+
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    l = 0.0001
+
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    l = 0.0001
+
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    l = 0.0001
+
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    l = 0.0001
+
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    l = 0.0001
+
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    l = 0.0001
+
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    l = 0.0001
+
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 6, 6, 6)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 13, 13, 13)):
+    model = Sequential()
+t1 = end_time_1 - start_time_1
+
+
+
+model_keras = Sequential()
+model_keras.add(Dense(h_layer_size, input_dim=num_features, init='uniform'))
+model_keras.add(Activation('tanh'))
+model_keras.add(Dense(num_classes, init='uniform'))
+from keras.models import Sequential
+from keras.layers import Dense,Activation,Flatten
+from keras.layers import Merge
+from keras.optimizers import SGD
+from keras.layers import normalization
+
+
+model = Sequential()
+model.add(Convolution2D(64,3,3),border_mode='same')
+import DataReader_KERAS as dr_keras
+
+
+def inference():
+
+    model = Sequential()
+    # input: 100x100 images with 3 channels -> (3, 100, 100) tensors.
+
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+
+    model.add(Dropout(0.25))
+
+
+    model.add(Flatten())
+    # Note: Keras does automatic shape inference.
+from keras.layers.advanced_activations import LeakyReLU, ELU, PReLU
+
+from keras.optimizers import SGD, Adam
+from keras.models import Model, Sequential
+import numpy as np
+
+filter_size = 4
+
+image_size = 128
+
+
+
+###model
+model = Sequential()
+model.add(LSTM(200,input_shape=(3,7000)))
+
+
+model.summary()
+vocab = 1e4
+
+
+
+
+
+model_word = Sequential()
+
+
+model_word.add(Embedding(vocab, feature_dim ))
+model.add(Reshape(dims=(feature_dim,)))
+models.append(model_word)
+
+
+model_context = Sequential()
+model_context.add(Embedding(vocab, feature_dim, input_length=1))
+def create_crcn():
+
+    model = Sequential()
+    model.add(BRNN(
+        300, 300, return_sequences=True,init='he_normal',
+
+def create_rcn():
+
+    model = Sequential()
+    model.add(BRNN(
+        300, 300, return_sequences=True,init='he_normal',
+
+import numpy as np
+
+import pandas as pd
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+model = Sequential()
+model.add(Dense(784, 128))
+model.add(Activation('relu'))
+model.add(Dropout(0.2))
+model.add(Dense(128, 128))
+__author__ = 'David'
+
+
+
+from keras.models import Sequential
+from keras.layers.recurrent import LSTM
+        print('Build model...')
+
+        model = Sequential()
+        model.add(LSTM(512, return_sequences=True, input_shape=(maxlen, maxlen(chars))))
+import pickle
+
+import pandas as pd
+
+from keras.models import  Sequential
+from keras.layers.core import Dense
+modelWeights = pickle.load(open('modelWeights.pkl', 'rb'))
+
+
+model = Sequential()
+model.add(BatchNormalization(input_shape=(X.shape[1],), weights = modelWeights[0]))
+from keras.models import Sequential
+from keras.layers import Convolution2D, Dense, Flatten, Lambda
+def normalize(x):
+
+    return x / 127.5 - 1
+
+
+
+def model_architecture():
+    model = Sequential()
+    model.add(Lambda(crop, input_shape=(160, 320, 3), name="crop"))
+    output = dataset[:, 6]
+
+    return (input, output)
+
+
+
+
+
+def oneLayerModel():
+    model = Sequential()
+    model.add(Dense(9, input_dim=9, init='normal', activation='tanh'))
+    model.add(Dense(9, input_dim=9, init='normal', activation='tanh'))
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation, Flatten, MaxoutDense
+    dropout = hp['dropout']
+
+
+
+    # build model
+    model = Sequential()
+
+
+    model.add(Convolution2D(nb_filters[0], nb_conv[0], nb_conv[0],
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+
+
+
+
+def build_model(input_shape=(1, 29, 29, 29)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten
+
+
+
+
+def build_model(input_shape=(1, 29, 29, 29)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+def build_model(num_classes, input_shape=(128, 21, 21, 21)):
+
+    model = Sequential()
+
+
+    model.add(Convolution3D(64, 5, 5, 5, activation='relu', input_shape=input_shape))
+from keras.layers import Input, Dense
+from keras.models import Model, Sequential
+import numpy as np
+
+import pandas as pd
+
+
+
+data = pd.read_csv("data.csv")
+
+X = data.as_matrix()
+
+
+
+model = Sequential()
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation, Flatten
+from keras.optimizers import SGD
+
+
+
+model = Sequential()
+model.add(Convolution2D(32, 3, 3, 3, border_mode='full'))
+model.add(Activation('relu'))
+#from keras.applications import vgg16
+from keras.models import Model, Sequential
+from keras.layers import Dense, Flatten, Dropout, Input, BatchNormalization
+    ############################ Nvidia ###################################
+
+
+
+    ############################# 4 conv  ##################################
+
+
+
+    model=Sequential()
+    model.add(Convolution2D(64,3,3, activation='relu', border_mode='same', input_shape=inputShape))
+from keras.models import Sequential
+from keras.layers import Convolution3D, Convolution2D, LSTM, Flatten, Reshape, Activation
+input = [];
+
+labels = [];
+
+
+
+
+
+model = Sequential();
+
+
+model.add(Convolution3D(1, 2, window, window, border_mode = 'same',input_shape=(2,recurrence,im_h,im_w)));
+    X = np.random.random((32, 100, 2))
+
+    Y = np.random.random((32, 10))
+
+
+
+    model_lstm = Sequential()
+    model_lstm.add(LSTM(10, input_shape=(100, 2)))
+    model_plstm = Sequential()
+    model_plstm.add(PhasedLSTM(10, input_shape=(100, 2)))
+    model_plstm.summary()
+from keras.models import Sequential, Model
+from keras.layers.embeddings import Embedding
+from keras.layers import Dropout
+    x = Input(shape=(4096,))
+
+    img_model1 = Model(input=x, output=x)
+    img_model2 = Sequential()
+    img_model2.add(img_model1)
+# Create first network with Keras
+from keras.models import Sequential
+from keras.layers import Dense
+# split into input (X) and output (Y) variables
+
+X = dataset[:,0:8]
+
+Y = dataset[:,8]
+
+# create model
+model = Sequential()
+from keras.models import Sequential
+from keras.layers import Convolution3D, Convolution2D, LSTM, Flatten, Reshape, Activation
+input = [];
+
+labels = [];
+
+
+
+
+
+model = Sequential();
+
+
+model.add(Convolution3D(1, 2, window, window, border_mode = 'same',input_shape=(2,recurrence,im_h,im_w)));
+
+
+    Neural network approach
+
+
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+    print(test)
+
+
+
+    model = Sequential()
+    model.add(Dense(output_dim=10, input_dim=))
+    model.add(Activation("relu"))
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation, Merge, Reshape
+from keras.optimizers import SGD
+
+
+model = Sequential()
+
+
+model.add(Dense(64, input_dim=15, init='uniform'))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 13, 13, 13)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 13, 13, 13)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 13, 13, 13)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 13, 13, 13)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 13, 13, 13)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 13, 13, 13)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 13, 13, 13)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+#-*- coding:utf-8 -*-
+
+# Create first network with Keras
+from keras.models import Sequential
+from keras.layers import Dense
+
+model = Sequential()
+model.add(Dense(12, input_dim=8, init= 'uniform' , activation= 'relu' ))
+model.add(Dense(8, init= 'uniform' , activation= 'relu' ))
+from keras.models import Sequential
+from keras.layers import LSTM, Dense, Activation, Dropout
+
+
+def model(input_dim, input_length):
+
+    mod=Sequential()
+    mod.add(LSTM(128,input_dim=input_dim,input_length=input_length, consume_less='cpu'))
+from keras.models import Sequential
+from keras.layers import SimpleRNN, Dense, Activation, Dropout
+
+
+def model(input_dim, input_length):
+    mod=Sequential()
+    mod.add(SimpleRNN(128,input_dim=input_dim,input_length=input_length, consume_less='cpu'))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+    model = Sequential()
+    model.add(Convolution3D(32, 3, 3, 3, activation='relu', input_shape=input_shape))
+# A simple implementation of matrix factorization for collaborative filtering
+
+# expressed as a Keras Sequential model. This code is based on the approach
+# outlined in [Alkahest](http://www.fenris.org/)'s blog post
+
+from keras.layers import Embedding, Reshape, Merge
+
+from keras.models import Sequential
+
+
+class CFModel(Sequential):
+
+
+    def __init__(self, n_users, m_items, k_factors, **kwargs):
+
+# -*- coding: utf-8 -*-
+
+from __future__ import print_function
+
+
+
+
+
+from keras.models import Sequential
+    model = Sequential()
+
+
+    model.add(Convolution2D(32, 3, 3, border_mode='same',
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+from keras.optimizers import SGD
+
+
+
+model = Sequential()
+model.add(Dense(20, 64, init='uniform'))
+model.add(Activation('tanh'))
+# -*- coding: utf-8 -*-
+
+from __future__ import print_function
+
+
+
+
+
+from keras.models import Sequential
+    model = Sequential()
+
+
+    model.add(Convolution2D(32, 3, 3, border_mode='same',
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import Dropout
+from keras.layers import Flatten
+num_classes = y_test.shape[1]
+
+# define model
+def larger_model():
+model = Sequential()
+model.add(Convolution2D(30, 5, 5, input_shape=(1, 28, 28), activation= ' relu ' ))
+# Create your first MLP in Keras
+from keras.models import Sequential
+from keras.layers import Dense
+# split into input (X) and output (Y) variables
+
+X = dataset[:,0:8]
+
+Y = dataset[:,8]
+
+# create model
+model = Sequential()
+# Create first network with Keras
+from keras.models import Sequential
+from keras.layers import Dense
+# split into input (X) and output (Y) variables
+
+X = dataset[:,0:8]
+
+Y = dataset[:,8]
+
+# create model
+model = Sequential()
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+from keras.optimizers import SGD
+
+
+model = Sequential()
+
+
+model.add(Dense(output_dim=64, input_dim=100))
+model.add(Activation("relu"))
+#! /usr/bin/env python
+
+
+
+
+
+from keras.models import Sequential
+
+
+from keras.layers import Embedding,GRU,TimeDistributedDense
+def get_language_model():
+
+
+
+
+    language_model = Sequential()
+
+
+    language_model.add(Embedding(vocab_size, 4096, input_length =  max_caption_length))
+from keras.regularizers import l2
+from keras.models import Sequential
+from keras.callbacks import EarlyStopping
+from sklearn.model_selection import RandomizedSearchCV
+
+
+
+
+def build_keras_base(hidden_layers = [64, 64, 64], dropout_rate = 0,
+from keras.preprocessing.image import ImageDataGenerator
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation, Flatten
+import pdb
+
+
+
+
+
+#create model
+model = Sequential()
+
+
+model.add(Convolution2D(4,5,5, border_mode='same',input_shape=(1,28,28))) #first conv layer
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+from keras.optimizers import SGD
+# build model with 1 hidden layer 4 neuron
+
+model = Sequential()
+model.add(Dense(output_dim=4, input_dim=2))
+model.add(Activation("tanh"))
+# Create your first MLP in Keras
+from keras.models import Sequential
+from keras.layers import Dense
+# split into input (X) and output (Y) variables
+
+X = dataset[:,0:8]
+
+Y = dataset[:,8]
+
+# create model
+model = Sequential()
+import DataReader_KERAS as dr_keras
+
+
+def inference():
+
+    model = Sequential()
+    # input: 100x100 images with 3 channels -> (3, 100, 100) tensors.
+
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+
+    model.add(Dropout(0.25))
+
+
+    model.add(Flatten())
+    # Note: Keras does automatic shape inference.
+# Create your first MLP in Keras
+from keras.models import Sequential
+from keras.layers import Dense
+# split into input (X) and output (Y) variables
+
+X = dataset[:,0:8]
+
+Y = dataset[:,8]
+
+# create model
+model = Sequential()
+# Create your first MLP in Keras
+from keras.models import Sequential
+from keras.layers import Dense
+# split into input (X) and output (Y) variables
+
+X = dataset[:,0:8]
+
+Y = dataset[:,8]
+
+# create model
+model = Sequential()
+# Create first network with Keras
+from keras.models import Sequential
+from keras.layers import Dense
+model = Sequential()
+model.add(Dense(4000, input_dim=8, init='uniform', activation='relu'))
+model.add(Dense(8000, init='uniform', activation='relu'))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    l = 0.0001
+
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 6, 6, 6)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 6, 6, 6)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 13, 13, 13)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 13, 13, 13)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 13, 13, 13)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 13, 13, 13)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    l = 0.0001
+
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    l = 0.0001
+
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    l = 0.0001
+
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+from keras.layers.embeddings import Embedding
+X_test = sequence.pad_sequences(X_test, maxlen=maxlen)
+
+
+
+
+
+model = Sequential()
+# model.add(Embedding(max_features, 128, input_length=maxlen, dropout=0.5))
+import numpy
+
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation, Flatten
+    model = Sequential()
+
+
+    model.add(Convolution2D(nb_filters, nb_conv, nb_conv, input_shape=(1, 32, 32), activation='relu', border_mode='same'))
+class RNN():
+
+    def build_model(self, n_features, n_timesteps):
+        model = Sequential()
+        model.add(LSTM(512, return_sequences=True, input_shape=(n_timesteps, n_features)))
+    def build_nn_model(self, vector_len, weights, dense_layers, activation='relu', dropout_rate=.5,
+
+                       init_dropout_rate=.2):
+
+        model = Sequential()
+        model.add(Embedding(weights.shape[0], vector_len, input_length=1, weights=[weights]))
+from keras.models import Sequential
+from keras.layers import Dense, Dropout
+import gcb535challengedata as gcb535
+
+gcb535_data = gcb535.read_data_sets(1, validation_fraction=0.)
+
+
+
+model = Sequential()
+model.add(Dense(300, input_dim=200, activation='relu'))
+# -*- coding: utf-8 -*-
+
+from __future__ import print_function
+
+
+
+
+
+from keras.models import Sequential
+    model = Sequential()
+
+
+    model.add(Convolution2D(32, 3, 3, border_mode='same',
+from framework.utils import keras_custom
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution2D, MaxPooling2D, ZeroPadding2D
+def conv_model(n_inputs):
+
+    model = Sequential()
+    model.add(Activation(activation=center_normalize, input_shape=(n_inputs, 64, 64)))
+from keras.models import Sequential
+from keras.layers import *
+from qlearning4k.games import Snake
+
+nb_frames = 4
+
+nb_actions = 5
+
+
+
+model = Sequential()
+model.add(BatchNormalization(axis=1, input_shape=(nb_frames, grid_size, grid_size)))
+# Create first network with Keras
+from keras.models import Sequential
+from keras.layers import Dense
+X = np.array(X[:, 1::], dtype=np.int32)
+
+X.shape
+
+# create model
+model = Sequential()
+#model.add(Dropout(0.2, input_shape=(8,)))
+model.add(Dense(50, input_dim=8, activation='relu', W_constraint=maxnorm(3)))
+import numpy
+
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers import Dense
+y_test = np_utils.to_categorical(y_test)
+
+num_classes = y_test.shape[1]
+
+
+
+def baseline_model():
+    # create model
+    model = Sequential()
+    model.add(Convolution2D(32, 5, 5, border_mode='valid', input_shape=(1, 28, 28), activation='relu'))
+    model = Sequential()
+    model.add(Dense(input_dim, input_shape=(input_dim,)))
+    model.add(Activation('relu'))
+def test_keras_regressor():
+    model = Sequential()
+    model.add(Dense(input_dim, input_shape=(input_dim,)))
+
+
+import sys
+
+import json
+
+
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation
+model = Sequential()
+
+
+model.add(Dense(input_dim = 4, output_dim = 6))
+model.add(Activation('relu'))
+
+
+model.add(Dense(output_dim = 3))
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation, Flatten
+import numpy as np
+
+import skimage
+
+from scipy import misc
+
+from glob import glob
+
+
+
+
+
+model = Sequential()
+model.add(Dense(32, input_shape=(500,)))
+import DataReader_KERAS as dr_keras
+
+
+def inference():
+
+    model = Sequential()
+    # input: 100x100 images with 3 channels -> (3, 100, 100) tensors.
+
+    model.add(MaxPooling2D(pool_size=(2, 2)))
+
+    model.add(Dropout(0.25))
+
+
+    model.add(Flatten())
+    # Note: Keras does automatic shape inference.
+    def image_model1(self):
+
+        model = Sequential()
+        model.add(Dense(output_dim=64, init='uniform', W_regularizer='L2', b_regularizer='L2', input_dim=9))
+        return model
+
+
+    def image_model(self):
+        model = Sequential()
+        model.add(Dense(output_dim=13, init='uniform', input_dim=10))
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.optimizers import SGD
+teX = np.array([[0.1, 0],
+
+                [0.2, 0.9],
+
+                [1.1, 0.2],
+
+                [0.8, 0.9]])
+
+# Create model
+model = Sequential()
+model.add(Dense(2, input_dim=2, activation='sigmoid'))
+from keras.preprocessing.image import ImageDataGenerator
+from keras.models import Sequential
+from keras.layers import Convolution2D, MaxPooling2D
+
+from keras.layers import Activation, Dropout, Flatten, Dense
+
+import cv2
+
+import sys
+
+
+
+model = Sequential()
+model.add(Convolution2D(32, 3, 3, input_shape=(3,150,150)))
+from keras.models import Sequential
+from keras.layers import *
+from qlearning4k.games import Snake
+
+nb_frames = 5
+
+nb_actions = 5
+
+
+
+model = Sequential()
+model.add(Convolution2D(16, 3, 3, activation='relu', input_shape=(nb_frames, grid_size, grid_size)))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 6, 6, 6)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 6, 6, 6)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 6, 6, 6)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 10, 10, 10)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 10, 10, 10)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 10, 10, 10)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+from keras.regularizers import l2
+
+
+
+def build_model(input_shape=(1, 5, 5, 5)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 8, 8, 8)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 6, 6, 6)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 6, 6, 6)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 6, 6, 6)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 10, 10, 10)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 10, 10, 10)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 10, 10, 10)):
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers import *
+from qlearning4k.games import Snake
+
+nb_frames = 5
+
+nb_actions = 5
+
+
+
+model = Sequential()
+model.add(Convolution2D(16, 3, 3, activation='relu', input_shape=(nb_frames, grid_size, grid_size)))
+import os,sys
+
+from keras.models import Sequential
+from keras.layers import * ##TODO: Fix layers to be imported
+    Y_train = np_utils.to_categorical(y_train, nb_classes)
+
+    print(X_train[0].shape)
+
+    model = Sequential()
+    #model.add(ZeroPadding2D((0,2,2),input_shape=X_train[0].shape))
+from keras.models import Sequential
+from keras.layers.core import Activation, Dense
+
+
+def createLstm(numHiddenUnits, numMolecules):
+
+    # Make network
+
+    model = Sequential()
+
+
+    # Make hidden layer
+
+from keras.models import Sequential
+from keras.regularizers import WeightRegularizer, ActivityRegularizer
+from keras.layers import Dense, Dropout, Activation, Flatten
+    model.add(Flatten())
+
+    # Note: Keras does automatic shape inference.
+    model.add(Dense(256,W_regularizer=WeightRegularizer(l1=1e-6,l2=1e-6)))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+def build_model(num_classes, input_shape=(1, 20, 20, 20)):
+
+    model = Sequential()
+
+
+    model.add(Convolution3D(32, 7, 7, 7, activation='relu', input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+    model = Sequential()
+    model.add(Convolution3D(32, 3, 3, 3, activation='relu', border_mode='same', input_shape=input_shape))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dense, Dropout
+    model = Sequential()
+    model.add(Convolution3D(32, 3, 3, 3, activation='relu', border_mode='same', input_shape=input_shape))
+
+
+from keras.layers import Dense
+from keras.models import Sequential
+import numpy
+
+
+
+numpy.random.seed(7)
+
+X=dataset[:,0:8]
+
+Y=dataset[:,8]
+
+
+
+model=Sequential()
+
+
+model.add(Dense(12,input_dim=8,init='uniform',activation='relu'))
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation,Flatten
+from keras.optimizers import SGD
+
+
+
+model = Sequential()
+model.add(Convolution2D(32, 3, 3, 3, border_mode='full'))
+model.add(Activation('relu'))
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation, TimeDistributed, TimeDistributedDense
+INTER_DIM = (20, 10)
+
+INPUT_LENGTH = 20
+
+INPUT_DIM = 17
+
+OUTPUT_DIM = 3
+
+
+
+def build_model():
+    model = Sequential()
+
+
+    model.add(LSTM(INTER_DIM[0], return_sequences=True, dropout_W=DROPOUT, dropout_U=DROPOUT,
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation, TimeDistributed, TimeDistributedDense
+INTER_DIM = (20, 10)
+
+INPUT_LENGTH = 20
+
+INPUT_DIM = 17
+
+OUTPUT_DIM = 3
+
+
+
+def build_model():
+    model = Sequential()
+
+
+    model.add(LSTM(INTER_DIM[0], return_sequences=True, dropout_W=DROPOUT, dropout_U=DROPOUT,
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation, TimeDistributed, TimeDistributedDense
+INTER_DIM = (20, 10)
+
+INPUT_LENGTH = 20
+
+INPUT_DIM = 17
+
+OUTPUT_DIM = 3
+
+
+
+def build_model():
+    model = Sequential()
+
+
+    model.add(LSTM(INTER_DIM[0], return_sequences=True, dropout_W=DROPOUT, dropout_U=DROPOUT,
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation,Flatten
+from keras.optimizers import SGD
+
+
+
+model = Sequential()
+model.add(Convolution2D(32, 3, 3, 3, border_mode='full'))
+model.add(Activation('relu'))
+# Create first network with Keras
+from keras.models import Sequential
+from keras.layers import Dense
+# split into input (X) and output (Y) variables
+
+X = dataset[:,0:8]
+
+Y = dataset[:,8]
+
+# create model
+model = Sequential()
+from keras.models import Sequential
+from keras.layers import Activation, Dense, Dropout, Flatten
+    pool_size = (2, 2)
+
+
+
+    dense_layer_size = 128
+
+
+
+    model = Sequential()
+
+
+    model.add(Convolution2D(nb_filters, kernel_size[0], kernel_size[1],
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import Dropout
+    print "using ", do_rate, "as dropout rate"
+
+    model = Sequential()
+    model.add(Dense(2000, input_dim=input_dim, init='normal', activation='sigmoid'))
+import numpy
+
+import pandas as pd
+
+
+
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.wrappers.scikit_learn import KerasRegressor
+
+
+from sklearn.linear_model import LinearRegression
+
+
+from keras.models import Sequential
+from keras.layers import Flatten, Dense
+from keras.optimizers import *
+nb_frames = 10
+
+grid_w = 400
+
+grid_h = 4000
+
+
+
+model = Sequential()
+model.add(Flatten(input_shape=(nb_frames, grid_w, grid_h)))
+    model = Sequential()
+    model.add(Dense(input_dim, input_shape=(input_dim,)))
+    model.add(Activation('relu'))
+def test_keras_regressor():
+    model = Sequential()
+    model.add(Dense(input_dim, input_shape=(input_dim,)))
+from keras.layers.convolutional import Convolution2D, ZeroPadding2D
+
+
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation, Reshape, Flatten
+def build_model(batch_size=128):
+
+
+    model = Sequential()
+    model.add(ZeroPadding2D(padding=(2, 2), input_shape=featureDim) )
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 6, 6, 6)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 6, 6, 6)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+def build_model(input_shape=(1, 5, 5, 5)):
+    model = Sequential()
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers.core import Dense,Dropout,Activation
+    print("正解ラベル->",y_train[0])
+
+
+
+
+
+#MLP
+
+def build_model():
+    model = Sequential()
+    model.add(Dense(512,input_shape=(784,)))
+from keras.layers.core import Dense, Activation
+from keras.models import Sequential
+from keras.datasets import mnist
+
+
+model = Sequential()
+
+
+model.add(Dense(output_dim=64, input_dim=100, init="glorot_uniform"))
+# Create your first MLP in Keras
+from keras.models import Sequential
+from keras.layers import Dense
+# split into input (X) and output (Y) variables
+
+X = dataset[:,0:8]
+
+Y = dataset[:,8]
+
+# create model
+model = Sequential()
+from keras.preprocessing.image import ImageDataGenerator
+from keras.models import Sequential
+from keras.layers import Convolution2D, MaxPooling2D
+
+from keras.layers import Activation, Dropout, Flatten, Dense
+
+
+
+# dimensions of our images.
+
+img_width, img_height = 2500, 2500
+
+
+
+model = Sequential()
+model.add(Convolution2D(32, 3, 3, input_shape=(3, img_width, img_height)))
+from keras.models import Sequential
+from keras.layers import Dense, Activation, BatchNormalization
+def train(images, labels):
+
+    model = Sequential()
+    model.add(Dense(64, input_dim=64, init='uniform'))
+    model.add(BatchNormalization())
+from keras.models import Sequential
+from keras.layers import Convolution2D, MaxPooling2D
+from keras.layers import Activation, Dropout, Flatten, Dense
+def build_model(n_class):
+    model_name = 'basic_adam'
+
+
+    model = Sequential()
+    model.add(Convolution2D(32, 3, 3, input_shape=(3,128,128)))
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.wrappers.scikit_learn import KerasClassifier
+def create_model(optimizer='rmsprop', init='uniform'):
+
+  model = Sequential()
+  model.add(Dense(12, input_dim=8, init=init, activation='relu'))
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.wrappers.scikit_learn import KerasClassifier
+from sklearn.cross_validation import cross_val_score
+
+import numpy
+
+
+
+def create_model():
+  model = Sequential()
+  model.add(Dense(12, input_dim=8, init='uniform', activation='relu'))
+from keras.models import Sequential
+from keras.layers import Convolution2D, MaxPooling2D
+from keras.layers import Activation, Dropout, Flatten, Dense
+def build_model():
+    model_name = 'basicencoder'
+
+
+    model = Sequential()
+    model.add(Convolution2D(32, 3, 3, input_shape=(1,128,128), init='he_normal', border_mode='same'))
+from keras.models import Sequential
+from keras.layers import Convolution2D, MaxPooling2D
+from keras.layers import Activation, Dropout, Flatten, Dense
+def build_model():
+    model_name = 'encoder2'
+
+
+    model = Sequential()
+    model.add(Convolution2D(32, 3, 3, input_shape=(1,128,128), init='he_normal', border_mode='same'))
+from keras.models import Sequential
+from keras.layers import Convolution2D, MaxPooling2D
+from keras.layers import Activation, Dropout, Flatten, Dense
+def build_model():
+    model_name = 'encoder3'
+
+
+    model = Sequential()
+    model.add(Convolution2D(64, 3, 3, input_shape=(1,128,128), init='he_normal', border_mode='same'))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 10, 10, 10)):
+    model = Sequential()
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+from keras.regularizers import l2
+
+
+
+
+
+def build_model(input_shape=(1, 10, 10, 10)):
+    model = Sequential()
+# coding=utf-8
+
+# shallow.py: Shallow n-layer network.
+
+
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout
+
+def ShallowNet(input_dim, dropout, dense_layers, dense_layer_units, weights=None):
+
+    model = Sequential()
+    model.add(Dropout(dropout, input_shape=(input_dim,)))
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Flatten, RepeatVector
+def build_CNN_LSTM(channels, width, height, lstm_output_size, nb_classes):
+
+    model = Sequential()
+# Create first network with Keras
+from keras.models import Sequential
+from keras.layers import Dense
+# split into input (X) and output (Y) variables
+
+X = dataset[:,0:8]
+
+Y = dataset[:,8]
+
+
+
+# create model
+model = Sequential()
+model.add(Dense(12, input_dim=8, init='uniform', activation='relu'))
+# Create first network with Keras
+from keras.models import Sequential
+from keras.layers import Dense
+# split into input (X) and output (Y) variables
+
+X = dataset[:,0:8]
+
+Y = dataset[:,8]
+
+
+
+# create model
+model = Sequential()
+model.add(Dense(12, input_dim=8, init='uniform', activation='relu'))
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation, Flatten
+from keras.optimizers import SGD
+
+
+
+model = Sequential()
+model.add(Convolution2D(32, 3, 3, 3, border_mode='full'))
+model.add(Activation('relu'))
+from keras.layers import Dense, Activation
+from keras.models import Sequential
+
+
+
+
+class KerasModel(object):
+        self.model = Sequential()
+        self.model.add(Dense(output_dim=64, input_dim=input_dim))
+        self.model.add(Activation("relu"))
+
+from keras.models import Sequential
+from keras.layers.core import Dense, Activation
+from keras.optimizers import SGD
+X = np.array([[0,0],[0,1],[1,0],[1,1]], dtype=np.float32)
+
+y = np.array([[0],[1],[1],[0]], dtype=np.float32)
+
+
+
+model = Sequential()
+model.add(Dense(input_dim=2,  output_dim=2, init='normal'))
+
+
+from keras.models import Sequential
+from keras.layers import Convolution2D, Dense, Dropout, Flatten, Activation, MaxPooling2D
+from keras.callbacks import EarlyStopping, ModelCheckpoint
+
+
+from keras.utils import np_utils
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+from keras.optimizers import SGD
+train = df.values
+
+X_train = train[:, 1:]
+
+Y_train = train[:, 0]
+
+
+
+model = Sequential()
+
+
+model.add(Dense(output_dim=1, input_dim=784))
+from keras.models import Sequential
+from keras.layers import Dense, Activation
+from keras.optimizers import SGD
+
+
+
+
+model = Sequential()
+model.add(Dense(output_dim=64, input_dim=100))
+model.add(Activation("relu"))
+# Create first network with Keras
+from keras.models import Sequential
+from keras.layers import Dense
+# split into input (X) and output (Y) variables
+
+X = dataset[:,0:8]
+
+Y = dataset[:,8]
+
+# create model
+model = Sequential()
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout
+from keras.layers.noise import GaussianNoise
+
+
+
+
+def build_model():
+    model = Sequential()
+    model.add(GaussianNoise(0.01, input_shape=(5,), name='diff_noise1'))
+# -*- coding: utf-8 -*-
+
+from __future__ import print_function
+
+
+
+
+
+from keras.models import Sequential
+    :return:
+
+
+    lr = 1e-4
+
+    model = Sequential()
+
+
+    model.add(Convolution2D(32, 5, 5, border_mode='same',
+    input_shape = (3, 224, 224)
+
+
+
+    #img_input = Input(shape=input_shape)
+
+
+
+    model = Sequential()
+
+
+    model.add(Convolution2D(128, 3, 3,
+    model.add(Activation('sigmoid'))
+
+
+    #weights='MODS_keras_weights_3_he_normal_0.5_rmsprop_24.h5'
+    #model.load_weights(weights)
+
+
+    return model
+from keras.models import Sequential
+from keras.layers import *
+from qlearning4k.games import Snake
+
+nb_frames = 4
+
+nb_actions = 5
+
+
+
+model = Sequential()
+model.add(Convolution2D(16, nb_row=3, nb_col=3, activation='relu', input_shape=(nb_frames, grid_size, grid_size)))
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout, Activation
+from keras.optimizers import SGD
+
+y = np.array([[0],[1],[1],[0]])
+
+
+
+model = Sequential()
+model.add(Dense(8, input_dim=2))
+model.add(Activation('tanh'))
+from keras.models import Sequential
+from keras.layers import *
+from qlearning4k.games import Snake
+
+nb_frames = 4
+
+nb_actions = 5
+
+
+
+model = Sequential()
+model.add(Convolution2D(16, nb_row=3, nb_col=3, activation='relu', input_shape=(nb_frames, grid_size, grid_size)))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+        name = 'AAL35'
+
+        do = 1.0/4
+
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape, name=name+'_noise1'))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+        name = 'AAL34'
+
+        do = 0.25
+
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape, name=name+'_noise1'))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+        name = 'AAL34'
+
+        do = 0.25
+
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape, name=name+'_noise1'))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+        name = 'AAL35'
+
+        do = 0.25
+
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape, name=name+'_noise1'))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+        name = 'AAL35'
+
+        do = 1.0/4
+
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape, name=name+'_noise1'))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+        name = 'meanROI2_4'
+
+        do = 1.0/4
+
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape, name=name+'_noise1'))
+from keras.models import Sequential
+from keras.layers.convolutional import Convolution3D
+from keras.layers.core import Flatten, Dropout, Dense
+        name = 'meanROI1_5'
+
+        do = 1.0/4
+
+    model = Sequential()
+        model.add(GaussianNoise(0.001, input_shape=input_shape, name=name+'_noise1'))
+from keras.models import Sequential
+from keras.layers import Flatten, Dense
+from qlearning4k.games import Catch
+
+hidden_size = 100
+
+nb_frames = 1
+
+
+
+model = Sequential()
+model.add(Flatten(input_shape=(nb_frames, grid_size, grid_size)))
+from keras.models import Sequential
+from keras.layers import LSTM, Dense
+import numpy as np
+
+import matplotlib.pyplot as plt
+
+# expected input data shape: (batch_size, timesteps, data_dim)
+
+model_A = Sequential()
+model_B = Sequential()
+model_Combine = Sequential()
+
+
+# LSTM Part
+
+from keras.models import Sequential
+from keras.layers import Dense
+import numpy
+
+seed = 7
+
+numpy.random.seed(seed)
+
+X = dataset[:,0:8]
+
+Y = dataset[:,8]
+
+
+
+
+
+model = Sequential()
+model.add(Dense(12, input_dim=8,init='uniform', activation='relu'))
+from keras.models import Sequential
+from keras.layers import Dense,Activation,Flatten
+from keras.layers import Merge
+from keras.optimizers import SGD
+
+
+model = Sequential()
+model.add(Convolution2D(64,3,3),border_mode='same',input_dim = ip)
+import numpy as np
+
+from keras.models import Sequential
+from keras.layers.core import Activation, Dense
+    inputs = np.asarray([[0, 0], [0, 1], [1, 0], [1, 1]])
+
+
+
+    labels = np.asarray([[0], [1], [1], [0]])
+
+
+
+    model = Sequential()
+from keras.datasets import imdb
+
+from keras.preprocessing import sequence
+from keras.models import Sequential
+from keras.layers import Dense, LSTM, Dropout, Flatten
+    X_test = sequence.pad_sequences(X_test, maxlen=500)
+
+
+
+    # building the model
+    model = Sequential()
+    model.add(Embedding(top_words, embedding_length, input_length=500))
+import pandas
+
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.wrappers.scikit_learn import KerasRegressor
+    model = Sequential()
+    model.add(Dense(13, input_dim=13, init='normal', activation='relu'))
+    model.add(Dense(1, init='normal'))
+# Create first network with Keras
+from keras.models import Sequential
+from keras.layers import Dense
+# split into input (X) and output (Y) variables
+
+X = dataset[:,0:8]
+
+Y = dataset[:,8]
+
+# create model
+model = Sequential()
+from keras.models import Sequential
+from keras.layers import Flatten, Dense
+from qlearning4k.games import Catch
+
+grid_size = 10
+
+hidden_size = 256
+
+nb_frames = 1
+
+
+
+model = Sequential()
+model.add(Flatten(input_shape=(nb_frames, grid_size, grid_size)))
+
+
+import numpy
+
+from keras.datasets import mnist
+from keras.models import Sequential
+from keras.layers import Dense
+num_classes = y_test.shape[1]
+
+
+
+
+
+def baseline_model():
+    # create model
+    model = Sequential()
+    model.add(Convolution2D(32, 5, 5, border_mode='valid', input_shape=(1, 28, 28),activation='relu'))
+from keras.models import Sequential
+from predictorModel import PredictorModel
+from keras.layers.core import Dense, Dropout, Activation
+        self.description = desc
+
+
+
+        self.model = Sequential()
+        self.model.add(Embedding(max_features, 64, input_length=self.days_seq))
