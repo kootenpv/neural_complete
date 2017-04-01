@@ -2,6 +2,10 @@
 
 This repository contains the backend for [Neural Complete](../). It uses Flask to expose a LSTM Recurrent Neural Network. This is where you can experiment with your models and your own data.
 
+### Installation
+
+    pip install -r requirements.txt
+
 ### Training the model
 
 Not such a nice setup, but at least possible to reproduce:
