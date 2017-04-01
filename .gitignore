@@ -17,8 +17,3 @@ __pycache__/
 .tox/
 .cache
 .coverage
-
-# repo
-data/
-*.h5
-*.pkl
