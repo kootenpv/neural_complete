@@ -1,6 +1,6 @@
 # Neural Complete
 
-[Neural Complete](https://github.com/kootenpv/neural_complete) is autocomplete based on a [generative](https://blog.openai.com/generative-models/) [seq2seq](https://google.github.io/seq2seq/) [LSTM](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) [neural network](https://keras.io), trained *on* python source code.
+[Neural Complete](https://github.com/kootenpv/neural_complete) is autocomplete based on a [generative](https://blog.openai.com/generative-models/) [seq2seq](https://google.github.io/seq2seq/) [LSTM](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) [neural network](https://keras.io), trained not only *by* python code but also *on* python source code.
 
 Ironically, it is trained on files containing [keras](https://keras.io/) imports. The result is a neural network trained to help writing neural network code.
 
@@ -30,7 +30,7 @@ However, the token based model is based on a higher level unit (semantic), and s
 
 The char based model looks back up to 80 characters, while the token based model looks back up to 20 tokens.
 
-It would be very fun to experiment with a future model in which it will use the python [AST](https://docs.python.org/3/library/ast.html), to consider variable names.
+It would be very fun to experiment with a future model in which it will use the python [AST](https://docs.python.org/3/library/ast.html) and take out variable naming out of the equation.
 
 ## Do It Yourself
 
