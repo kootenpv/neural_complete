@@ -39,3 +39,6 @@ for num, link in enumerate(links):
     # note that link conveniently starts with / like a webpath
     just.write(contents, "data" + link)
     print(num, len(contents))
+
+other_options = []
+# bigquery
