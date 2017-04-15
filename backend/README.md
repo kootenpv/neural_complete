@@ -4,7 +4,7 @@ This repository contains the backend for [Neural Complete](../). It uses Flask t
 
 ### Installation
 
-    pip install -r requirements.txt
+    pip3.5 install -r requirements.txt
 
 ### Training the model
 
