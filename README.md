@@ -1,6 +1,6 @@
 # Neural Complete
 
-[Neural Complete](https://github.com/kootenpv/neural_complete) is autocomplete based on a [generative](https://blog.openai.com/generative-models/) [seq2seq](https://google.github.io/seq2seq/) [LSTM](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) [neural network](https://keras.io), trained not only *by* python code but also *on* python source code.
+[Neural Complete](https://github.com/kootenpv/neural_complete) is autocomplete based on a [generative](https://blog.openai.com/generative-models/) [LSTM](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) [neural network](https://keras.io), trained not only *by* python code but also *on* python source code.
 
 Ironically, it is trained on files containing [keras](https://keras.io/) imports. The result is a neural network trained to help writing neural network code.
 
