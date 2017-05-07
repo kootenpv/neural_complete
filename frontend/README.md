@@ -8,9 +8,11 @@ It depends on `ng2-auto-complete` for autocomplete functionality
 
 1. Install [angular 2 cli](https://github.com/angular/angular-cli) (and its prerequisites)
 
-2. Run `ng serve`
+2. Run `npm install`
 
-3. Observe the frontend at http://localhost:4200
+3. Run `ng serve`
+
+4. Observe the frontend at http://localhost:4200
 
 ### Serve the dist folder
 
