@@ -49,10 +49,17 @@ def neural_complete(model, text, diversities):
     suggestions = [text.split("\n")[-1] + x.rstrip("\n") for x in predictions]
     return suggestions
 
+
 if __name__ == "__main__":
     import sys
-    print(sys.argv)
-    if sys.argv[1] == "char":
-        train_char("neural_char")
-    elif sys.argv[1] == "token":
-        train_token("neural_token")
+    if len(sys.argv) != 3:
+        raise Exception(
+            "expecting model name, such as 'neural' and type (either 'char' or 'token'")
+    model_name = "_".join(sys.argv[1:])
+    if sys.argv[2] == "char":
+        train_char(model_name)
+    elif sys.argv[2] == "token":
+        train_token(model_name)
+    else:
+        msg = "The second argument cannot be {}, but should be either 'char' or 'token'"
+        raise Exception(msg.format(sys.argv[2]))
