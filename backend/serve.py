@@ -29,6 +29,8 @@ def predict():
     args = get_args(request)
     sentence = args.get("keyword", "from ")
     model_name = args.get("model", "char")
+    if model_name not in models:
+        models[model_name] = get_model(model_name)
     suggestions = neural_complete(models[model_name], sentence, [0.2, 0.5, 1])
     return jsonify({"data": {"results": [x.strip() for x in suggestions]}})
 
